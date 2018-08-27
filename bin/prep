@@ -1,0 +1,41 @@
+#!/bin/bash
+
+set -e
+
+cd "${0%/*}/.." # script is in bin/
+
+function log {
+  echo "
+--- $@
+"
+}
+
+if [ "$1" != 'ci' ]; then
+  cd front
+    log 'yarn'
+      yarn
+
+  cd ../back
+    # backend prep - eg. composer/bundler/etc. here
+
+else
+  if [ -z "$CI" ]; then
+    echo 'should only be run from ci'
+    exit 1
+  fi
+
+  cd front
+    log 'yarn'
+      yarn || (rm -rf node_modules && yarn)
+    log 'build front'
+      yarn build || (rm -rf node_modules && yarn && yarn build)
+
+  cd ../back
+    # ci-specific backend prep here
+
+  cd ..
+    log 'copy to deploy dir'
+      mkdir -p deploy
+      cp -R front/dist deploy/front
+      cp -R back deploy/back
+fi

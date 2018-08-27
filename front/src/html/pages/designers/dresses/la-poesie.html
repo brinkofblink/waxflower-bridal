@@ -1,0 +1,34 @@
+---
+designer: la-poesie
+designerpage: true
+dresses:
+  -
+    name: Beatriz
+    filename: beatriz.jpg
+  -
+    name: Coralie
+    filename: coralie.jpg
+  -
+    name: Steffie
+    filename: steffie.jpg
+---
+<div class="hero">
+  <h1 class="light">La Poésie</h1>
+  <img src="/img/designers/la-poesie/la-poesie-header.jpg"/>
+</div>
+<div class="intro-block">
+  <h1>Description of the designer featured on this page</h1>
+  <p>Gowns from <span>£2,100</span> to <span>£3,200</span></p>
+  <small>To arrange an appointment</small>
+  <a href="/contact.html" class="button">Book now</a>
+</div>
+<div class="dresses">
+  {{#each dresses}}
+  <div class="dress">
+    <div class="image">
+      <img src="/img/designers/{{../designer}}/{{this.filename}}" alt="">
+    </div>
+    <h2>{{this.name}} {{>heart}}</h2>
+  </div>
+  {{/each}}
+</div>

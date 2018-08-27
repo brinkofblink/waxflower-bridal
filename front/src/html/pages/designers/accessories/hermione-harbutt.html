@@ -1,0 +1,28 @@
+---
+designer: hermione-harbutt
+designerpage: true
+dresses:
+  -
+    name: Bien
+    filename: bien.jpg
+---
+<div class="hero">
+  <h1 class="light">Hermione Harbutt</h1>
+  <img src="/img/designers/hermione-harbutt/hermione-harbutt-header.jpg"/>
+</div>
+<div class="intro-block">
+  <h1>Description of the designer featured on this page</h1>
+  <p>Accessories from <span>£2,100</span> to <span>£3,200</span></p>
+  <small>To arrange an appointment</small>
+  <a href="/contact.html" class="button">Book now</a>
+</div>
+<div class="dresses">
+  {{#each dresses}}
+  <div class="dress">
+    <div class="image">
+      <img src="/img/designers/{{../designer}}/{{this.filename}}" alt="">
+    </div>
+    <h2>{{this.name}} {{>heart}}</h2>
+  </div>
+  {{/each}}
+</div>

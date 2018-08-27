@@ -1,0 +1,60 @@
+{
+  "name": "waxflower",
+  "version": "1.0.0",
+  "description": "waxflower",
+  "main": "gulpfile.babel.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build --production"
+  },
+  "engines": {
+    "node": ">= 8.11.0"
+  },
+  "author": "waxflower",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:so-design-studio/waxflower.git"
+  },
+  "private": true,
+  "dependencies": {
+    "autoprefixer": "^6.7.3",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "barba.js": "^1.0.0",
+    "breakpoint-sass": "^2.7.1",
+    "browser-sync": "^2.18.8",
+    "float-labels.js": "^3.3.5",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-cli": "^1.2.1",
+    "gulp-concat": "^2.5.2",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-extname": "^0.2.0",
+    "gulp-if": "^2.0.0",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-postcss": "^6.3.0",
+    "gulp-sass": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.8",
+    "js-yaml": "^3.4.6",
+    "json-loader": "^0.5.4",
+    "normalize.css": "^8.0.0",
+    "panini": "^1.3.0",
+    "pixrem": "^3.0.2",
+    "postcss-ant": "^2.1.1",
+    "postcss-flexibility": "^1.0.3",
+    "rimraf": "^2.4.3",
+    "smooth-scroll": "github:cferdinandi/smooth-scroll",
+    "tiny-slider": "^2.8.5",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^2.2.1",
+    "webpack-stream": "^3.2.0",
+    "yargs": "^3.8.0"
+  },
+  "devDependencies": {
+    "gulp-rev": "^7.1.2"
+  }
+}

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+cd "${0%/*}/.." # script is in bin/
+
+cd front
+yarn start # &
+# cd ../back
+# rails s &
+# wait

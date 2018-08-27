@@ -1,0 +1,9 @@
+// colours
+$base: #4C4C4C;
+$bg: #fff;
+$accent: #fff;
+$white: #fff;
+$palettes: ( white: ( base: #ffffff, dark: #fafafa), grey: ( base: #4C4C4C, medium: #AAAAAA), black: ( base: #0B0B0B, light: #202223), pink: (base: #FEF9FA, bright: #F8A6D9));
+@function c($palette, $tone: 'base') {
+  @return map-get(map-get($palettes, $palette), $tone);
+}

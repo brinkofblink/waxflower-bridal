@@ -1,0 +1,48 @@
+.main.events .intro {
+  @include mobile-and-tablet {
+    grid-column: 2 / 10;
+  }
+  grid-auto-flow: dense;
+}
+
+.events-listing {
+  display: contents;
+}
+
+.event__info {
+  justify-self: center;
+  align-self: center;
+}
+
+.event__image {
+  justify-self: center;
+  align-self: center;
+  img {
+    position: relative;
+    width: 100%;
+  }
+}
+
+.event__image {
+  grid-column: 6 / 10;
+  @include mobile {
+    grid-column: 2 / -2;
+  }
+}
+.event__info {
+  grid-column: 1 / 6;
+  @include mobile {
+    grid-column: 3 / -2;
+    justify-self: start;
+  }
+}
+
+.event {
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 1px solid c(grey);
+  }
+}

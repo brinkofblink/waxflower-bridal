@@ -1,0 +1,49 @@
+---
+designer: halfpenny-london
+designerpage: true
+dresses:
+  -
+    name: Bay Skirt / Iris Slip
+    filename: bay-skirt-with-iris-slip.jpg
+  -
+    name: Cheryl
+    filename: cheryl.jpg
+  -
+    name: Cora
+    filename: cora.jpeg
+  -
+    name: Daisy
+    filename: daisy.jpg
+  -
+    name: Iris-rose
+    filename: iris-rose.jpg
+  -
+    name: Laura top / Start skirt
+    filename: laura-top-start-skirt.jpg
+  -
+    name: Vera / lace frill
+    filename: vera-lace-frill.jpg
+  -
+    name: Vera
+    filename: vera.jpg
+---
+<div class="hero">
+  <h1 class="light">Halfpenny London</h1>
+  <img src="/img/designers/halfpenny-london/halfpenny-london-header.jpg"/>
+</div>
+<div class="intro-block">
+  <h1>Description of the designer featured on this page</h1>
+  <p>Gowns from <span>£2,100</span> to <span>£3,200</span></p>
+  <small>To arrange an appointment</small>
+  <a href="/contact.html" class="button">Book now</a>
+</div>
+<div class="dresses">
+  {{#each dresses}}
+  <div class="dress">
+    <div class="image">
+      <img src="/img/designers/{{../designer}}/{{this.filename}}" alt="">
+    </div>
+    <h2>{{this.name}} {{>heart}}</h2>
+  </div>
+  {{/each}}
+</div>
