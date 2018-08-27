@@ -83,7 +83,7 @@ else {
 
 // build dist
 Gulp.task('build',
- Gulp.series(clean, Gulp.parallel(pages, css, js, images, fonts, etc)))
+ Gulp.series(clean, Gulp.parallel(pages, css, js, images, fonts, etc, admin)))
 
 // default task: build, serve and watch for changes
 Gulp.task('default',
@@ -103,6 +103,11 @@ function etc() {
 function fonts() {
   return Gulp.src(PATHS.fonts.include)
     .pipe(Gulp.dest(dist(PATHS.fonts.output_dir)))
+}
+
+function admin() {
+  return Gulp.src(PATHS.admin.include)
+    .pipe(Gulp.dest(dist(PATHS.admin.output_dir)))
 }
 
 // compile static pages using panini

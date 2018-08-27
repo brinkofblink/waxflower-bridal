@@ -9,11 +9,12 @@ public_folder: "img/uploads"
 collections:
   - name: "home" # Used in routes, e.g., /admin/collections/blog
     label: "Home" # Used in the UI
-    file: "src/html/pages/index.html" # The path to the folder where the documents are stored
+    file: "src/html/pages/index" # The path to the folder where the documents are stored
     create: false # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{slug}}" # Filename
+    extension: "html"
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Intro", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"

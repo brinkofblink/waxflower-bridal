@@ -48,6 +48,12 @@ paths:
       - src/fonts/**/*
     output_dir: webfonts
 
+  admin:
+    watch: src/admin/**/*
+    include:
+      - src/admin/**/*
+    output_dir: admin
+
   etc:
     - src/etc/**/*
 
