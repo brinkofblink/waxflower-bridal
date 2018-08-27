@@ -7,13 +7,16 @@ media_folder: "src/img/uploads" # Media files will be stored in the repo under i
 public_folder: "img/uploads"
 
 collections:
-  - name: "home" # Used in routes, e.g., /admin/collections/blog
-    label: "Home" # Used in the UI
-    files: "src/html/pages/index" # The path to the folder where the documents are stored
-    create: false # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename
-    extension: "html"
-    fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "string"}
-      - {label: "Intro", name: "date", widget: "datetime"}
+  - label: "Pages"
+    name: "pages"
+    files:
+      - name: "home" # Used in routes, e.g., /admin/collections/blog
+        label: "Home" # Used in the UI
+        files: "src/html/pages/index" # The path to the folder where the documents are stored
+        create: false # Allow users to create new documents in this collection
+        slug: "{{slug}}" # Filename
+        extension: "html"
+        fields: # The fields for each document, usually in front matter
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Intro", name: "date", widget: "datetime"}
