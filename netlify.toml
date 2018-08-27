@@ -7,5 +7,5 @@
 
 [build]
   base    = "front"
-  publish = "dist"
+  publish = "front/dist"
   command = "gulp build --production"
