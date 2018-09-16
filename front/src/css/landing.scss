@@ -1,16 +1,15 @@
 @charset 'utf-8';
 @import './common/vendor';
+@import './common/typography';
 body {
   font-family: "BrandonGrotesque";
   text-transform: uppercase;
   line-height: 1.6;
   font-weight: normal;
   color: #0B0B0B;
+background-color: hsla(8, 87%, 93%, 1);
 }
 
-.pink-bg {
-  background-color: #FEF9FA;
-}
 
 .landing-wrap {
   display: flex;

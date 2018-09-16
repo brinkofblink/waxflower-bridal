@@ -41,6 +41,8 @@
 
 .nav__item {
   height: auto;
+  font-size: 0.9rem;
+  letter-spacing: 0.025rem;
   @include mobile {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -114,7 +116,8 @@
       margin-top: 0;
       font-size: 1.3rem;
       font-weight: normal;
-      border-bottom: 1px dashed c(white, dark);
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid c(white, dark);
       @include mobile {
         font-size: 1rem;
         padding-bottom: $p/2;

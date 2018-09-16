@@ -1,18 +1,14 @@
 ---
 designer: king-sophies-world
 designerpage: true
-dresses:
-  -
-    name: Bien
-    filename: bien.jpg
 ---
 <div class="hero">
   <h1 class="light">King Sophie's World</h1>
   <img src="/img/designers/king-sophies-world/king-sophies-world-header.jpg"/>
 </div>
 <div class="intro-block">
-  <h1>Description of the designer featured on this page</h1>
-  <p>Accessories from <span>£2,100</span> to <span>£3,200</span></p>
+  <h1>A breath of fresh air. Exclusive to Waxflower Bridal</h1>
+  <p>Accessories from <span>£x,xxx</span> to <span>£x,xxx</span></p>
   <small>To arrange an appointment</small>
   <a href="/contact.html" class="button">Book now</a>
 </div>
@@ -21,6 +17,9 @@ dresses:
   <div class="dress">
     <div class="image">
       <img src="/img/designers/{{../designer}}/{{this.filename}}" alt="">
+      <div class="dress-name">
+        {{ this.name }}
+      </div>
     </div>
     <h2>{{this.name}} {{>heart}}</h2>
   </div>

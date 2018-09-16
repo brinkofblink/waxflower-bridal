@@ -17,8 +17,8 @@ dresses:
   <img src="/img/designers/la-poesie/la-poesie-header.jpg"/>
 </div>
 <div class="intro-block">
-  <h1>Description of the designer featured on this page</h1>
-  <p>Gowns from <span>£2,100</span> to <span>£3,200</span></p>
+  <h1>Gorgeous, chic design with surprising elements</h1>
+  <p>Gowns from <span>£x,xxx</span> to <span>£x,xxx</span></p>
   <small>To arrange an appointment</small>
   <a href="/contact.html" class="button">Book now</a>
 </div>
@@ -27,6 +27,10 @@ dresses:
   <div class="dress">
     <div class="image">
       <img src="/img/designers/{{../designer}}/{{this.filename}}" alt="">
+      <div class="dress-name">
+        {{ this.name }}
+        <div class="dress-heart">{{>heart}}</div>
+      </div>
     </div>
     <h2>{{this.name}} {{>heart}}</h2>
   </div>
