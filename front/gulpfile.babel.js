@@ -1,23 +1,25 @@
 'use strict'
 
-import Plugins       from 'gulp-load-plugins'
-import Yargs         from 'yargs'
-import BrowserSync   from 'browser-sync'
-import Gulp          from 'gulp'
-import Util          from 'gulp-util'
-import Panini        from 'panini'
-import Rimraf        from 'rimraf'
-import Yaml          from 'js-yaml'
-import Fs            from 'fs'
-import Path          from 'path'
-import Webpack       from 'webpack'
+import Plugins from 'gulp-load-plugins'
+import Yargs from 'yargs'
+import BrowserSync from 'browser-sync'
+import Gulp from 'gulp'
+import Util from 'gulp-util'
+import Panini from 'panini'
+import Rimraf from 'rimraf'
+import Yaml from 'js-yaml'
+import Fs from 'fs'
+import Path from 'path'
+import Webpack from 'webpack'
 import WebpackStream from 'webpack-stream'
-import Named         from 'vinyl-named'
-import Rev           from 'gulp-rev'
-import PostcssAnt    from 'postcss-ant'
-import Pixrem        from 'pixrem'
-import Autoprefixer  from 'autoprefixer'
-import { exec }      from 'child_process'
+import Named from 'vinyl-named'
+import Rev from 'gulp-rev'
+import PostcssAnt from 'postcss-ant'
+import Pixrem from 'pixrem'
+import Autoprefixer from 'autoprefixer'
+import {
+  exec
+} from 'child_process'
 
 
 // --- setup ---
@@ -39,7 +41,9 @@ const dist = (p) => p ? `${PATHS.dist}/${p}` : PATHS.dist
 // --- webpack setup ---
 
 const wpOptions = {
-  output: { filename: '[name].js' },
+  output: {
+    filename: '[name].js'
+  },
   resolve: {
     modules: PATHS.js.include,
     extensions: [
@@ -49,8 +53,7 @@ const wpOptions = {
     ],
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /.jsx?$/,
         use: 'babel-loader',
         exclude: PATHS.js.exclude_loaders,
@@ -64,13 +67,14 @@ const wpOptions = {
   }
 }
 
-if(!PRODUCTION) {
+if (!PRODUCTION) {
   wpOptions.devtool = 'cheap-eval-source-map'
-}
-else {
+} else {
   wpOptions.plugins = [
     new Webpack.optimize.UglifyJsPlugin({
-      compress: { warnings: false }
+      compress: {
+        warnings: false
+      }
     }),
     new Webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
@@ -83,7 +87,7 @@ else {
 
 // build dist
 Gulp.task('build',
- Gulp.series(clean, Gulp.parallel(pages, css, js, images, fonts, etc, admin)))
+  Gulp.series(clean, Gulp.parallel(pages, css, js, images, fonts, etc, admin)))
 
 // default task: build, serve and watch for changes
 Gulp.task('default',
@@ -114,16 +118,16 @@ function admin() {
 function pages() {
   const paths = PATHS.html
 
-  if(CONFIG.dev_server.back)
+  if (CONFIG.dev_server.back)
     return Gulp.src('.').pipe(Util.noop())
 
   return Gulp.src(paths.src)
     .pipe(Panini({
-      root:     paths.root,
-      layouts:  paths.layouts,
+      root: paths.root,
+      layouts: paths.layouts,
       partials: paths.partials,
-      data:     paths.data,
-      helpers:  paths.helpers,
+      data: paths.data,
+      helpers: paths.helpers,
     }))
     .pipe(Gulp.dest(dist()))
 }
@@ -139,12 +143,15 @@ function css() {
   return Gulp.src(PATHS.css.entry)
     .pipe($.sourcemaps.init())
     .pipe($.sass({
-      includePaths: PATHS.css.include
-    })
+        includePaths: PATHS.css.include
+      })
       .on('error', $.sass.logError))
     .pipe($.postcss([
       PostcssAnt(),
-      Autoprefixer({ browsers: CONFIG.autoprefixer_compatibility }),
+      Autoprefixer({
+        grid: true,
+        browsers: CONFIG.autoprefixer_compatibility
+      }),
       Pixrem(),
     ]))
     .pipe($.if(PRODUCTION, $.cssnano()))
@@ -154,7 +161,9 @@ function css() {
     .pipe(Gulp.dest(dist()))
     // .pipe($.if(PRODUCTION, $.rev.manifest()))
     // .pipe($.if(PRODUCTION, Gulp.dest(dist())))
-    .pipe(BrowserSync.reload({ stream: true }))
+    .pipe(BrowserSync.reload({
+      stream: true
+    }))
 }
 
 // bundle js with webpack; adjust for dev vs. production
@@ -168,9 +177,9 @@ function js() {
 // copy images to dist; compress in production
 function images() {
   return Gulp.src(PATHS.img.include)
-    .pipe($.if(PRODUCTION, $.imagemin({
-      progressive: true
-    })))
+    // .pipe($.if(PRODUCTION, $.imagemin({
+    //   progressive: true
+    // })))
     .pipe(Gulp.dest(dist(PATHS.img.output_dir)))
 }
 
@@ -179,11 +188,11 @@ function devServer(done) {
   const server = CONFIG.dev_server
 
   const bsOptions = {
-    port:   server.port,
+    port: server.port,
     notify: false,
-    open:   false,
+    open: false,
   }
-  if(server.back)
+  if (server.back)
     bsOptions.proxy = server.domain
   else
     bsOptions.server = dist()
@@ -196,7 +205,7 @@ function devServer(done) {
 
 function reload(done) {
   BrowserSync.reload()
-  if(typeof done === 'function')
+  if (typeof done === 'function')
     done()
 }
 
