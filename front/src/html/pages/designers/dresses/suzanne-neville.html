@@ -24,21 +24,12 @@ dresses:
 </div>
 <div class="intro-block">
   <h1>Timeless romantic design. Exquisitely well-made.</h1>
-  <p>Gowns from <span>£x,xxx</span> to <span>£x,xxx</span></p>
+  <p>Gowns from <span>£2,245</span> to <span>£3,500</span></p>
   <small>To arrange an appointment</small>
   <a href="/contact.html" class="button">Book now</a>
 </div>
 <div class="dresses">
   {{#each dresses}}
-  <div class="dress">
-    <div class="image">
-      <img src="/img/designers/{{../designer}}/{{this.filename}}" alt="">
-      <div class="dress-name">
-        {{ this.name }}
-        <div class="dress-heart">{{>heart}}</div>
-      </div>
-    </div>
-    <h2>{{this.name}} {{>heart}}</h2>
-  </div>
+  {{> dress name=this.name filename=this.filename designer=../designer}}
   {{/each}}
 </div>

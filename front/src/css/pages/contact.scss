@@ -52,7 +52,10 @@
   }
   input[type="submit"] {
     text-align: center;
-    padding-left: initial;
+    padding-left: 2rem;
+  }
+  form {
+    margin-bottom: 1rem;
   }
 }
 

@@ -10,7 +10,7 @@
 }
 
 .event__info {
-  justify-self: center;
+  justify-self: flex-start;
   align-self: center;
 }
 
@@ -30,7 +30,8 @@
   }
 }
 .event__info {
-  grid-column: 1 / 6;
+  grid-column: 3 / 6;
+  text-align: left;
   @include mobile {
     grid-column: 3 / -2;
     justify-self: start;
@@ -38,11 +39,6 @@
 }
 
 .event {
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    border-bottom: 1px solid c(grey);
-  }
+  position: relative;
+  border-bottom: 1px solid c(grey);
 }

@@ -72,6 +72,16 @@
     }
   }
 
+  .wardrobe-link {
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    svg {
+      width: 1em;
+      height: 1em;
+      margin-right: 0.5rem;
+    }
+  }
   .nav {
     grid-area: nav;
 
@@ -88,10 +98,14 @@
 .header__social {
   li {
     margin-left: 0.5rem;
-
+    display: inline-flex;
+    align-items: center;
+    a {
+      display: inline-flex;
+      align-items: center;
+    }
     @include tablet {
       width: 2rem;
-
       img {
         position: relative;
         width: 100%;

@@ -17,6 +17,5 @@ Ready(() => {
     nav: false,
     controls: false,
     speed: 1200,
-    autoHeight: true,
   });
 })

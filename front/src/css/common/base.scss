@@ -31,6 +31,16 @@ body {
   }
 }
 
+.u-hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  max-width: 0;
+  max-height: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+}
+
 // For use on spans inside links.
 .u-expander {
   position: absolute;
