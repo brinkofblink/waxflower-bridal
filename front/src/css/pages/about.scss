@@ -79,6 +79,9 @@
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-gap: 2rem;
+  img {
+    margin-top: 5rem;
+  }
   @include mobile-and-tablet {
     img {
       width: 25vw;
