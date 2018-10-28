@@ -9,8 +9,7 @@ Ready(() => {
     return;
   const slider = tns({
     container: sliderEl,
-    // items: sliderEl.children.length,
-    // slideBy: 'page',
+    rewind: false,
     autoplay: true,
     autoWidth: true,
     autoplayButtonOutput: false,
