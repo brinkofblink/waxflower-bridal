@@ -91,7 +91,7 @@
 .about__british-designers {
   grid-area: e;
   display: grid;
-  grid-template-columns: 1fr minmax(20rem, 1fr);
+  grid-template-columns: minmax(20rem, 1fr) 1fr ;
   grid-column-gap: 4rem;
   img {
     position: relative;
@@ -104,7 +104,7 @@
   }
 }
 .about__name {
-  grid-area: d;
+  grid-area: f;
   display: grid;
   grid-template-columns: 1fr 1fr;
   @include mobile-and-tablet {

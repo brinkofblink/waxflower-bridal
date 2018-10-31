@@ -8,6 +8,9 @@
   grid-column-gap: 2rem;
   grid-row-gap: 4rem;
   grid-template-areas: ". a a a a a a ." ". b b b c c c ." ". d d d d d d ." ". . e e f f . .";
+  @include mobile-and-tablet {
+    grid-template-areas: ". a a a a a a ." ". b b b b b b ." ". c c c c c c ." ". d d d d d d ." ". e e e e e e ." ". f f f f f f .";
+  }
   margin-bottom: 2rem;
   p {
     text-transform: initial;

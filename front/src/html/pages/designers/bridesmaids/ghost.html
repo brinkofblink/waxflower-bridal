@@ -1,31 +1,6 @@
 ---
 designer: ghost
 designerpage: true
-dresses:
-  -
-    name: Claudia - Boudoir Pink
-    filename: bien.jpg
-  -
-    name: Salma - Emerald Sea
-    filename: bien.jpg
-  -
-    name: Salma - Silver Lake
-    filename: bien.jpg
-  -
-    name: Sylvia Taupe
-    filename: bien.jpg
-  -
-    name: Sylvia Ivory
-    filename: bien.jpg
-  -
-    name: Fern - Dusty Green
-    filename: bien.jpg
-  -
-    name: Bien
-    filename: bien.jpg
-  -
-    name: Bien
-    filename: bien.jpg
 ---
 <div class="hero">
   <h1 class="light">Ghost</h1>
@@ -36,17 +11,4 @@ dresses:
   <p>Gowns from <span>£225</span> to <span>£245</span></p>
   <small>To arrange an appointment</small>
   <a href="/contact.html" class="button">Book now</a>
-</div>
-<div class="dresses">
-  {{#each dresses}}
-  <div class="dress">
-    <div class="image">
-      <img src="/img/designers/{{../designer}}/{{this.filename}}" alt="">
-      <div class="dress-name">
-        {{ this.name }}
-      </div>
-    </div>
-    <h2>{{this.name}} {{>heart}}</h2>
-  </div>
-  {{/each}}
 </div>
