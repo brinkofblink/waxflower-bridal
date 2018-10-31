@@ -16,14 +16,18 @@
   width: 100vw;
   grid-column-gap: 10px;
   grid-row-gap: 20px;
-  grid-template-columns: 4% 1fr 1fr repeat(4, minmax(10rem, 1fr)) 1fr 1fr 4%;
-
+  // grid-template-columns: 4% 1fr 1fr repeat(4, minmax(10rem, 1fr)) 1fr 1fr 4%;
+  grid-template-columns: 4% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 4%;
+  grid-template-areas: "hero hero hero hero hero hero hero hero hero hero"
+  ". . . row1 row1 row1 row1 . . ."
+  "row2 row2 row2 row2 row2 row2 row2 row2 row2 row2"
+  "row3 row3 row3 row3 row3 row3 row3 row3 row3 row3";
   @include mobile-and-tablet {
     grid-template-columns: 4% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 4%;
   }
 
-  grid-template-rows: 58% minmax(20rem, auto) repeat(auto-fit, auto);
-  align-items: start;
+  grid-template-rows: auto;
+  // align-items: no;
 
   &:before {
     position: absolute;
@@ -38,8 +42,7 @@
 
   .slider-wrap,
   .hero {
-    grid-column: 1 / 11;
-    grid-row: 1;
+    grid-area: hero;
     position: relative;
 
     h1 {
@@ -59,8 +62,7 @@
   }
 
   .intro-block {
-    grid-column: 4 / 8;
-    grid-row: 2;
+    grid-area: row1;
     text-align: center;
     align-self: center;
     padding-bottom: 2rem;
@@ -93,11 +95,11 @@
   }
 
   .homepage-details {
-    grid-column: 2 / 10;
+    grid-area: row2;
     display: grid;
     grid-gap: 2rem;
     grid-template: "homedetailsimage homedetailsbuttons"auto / 1fr 1fr;
-    grid-row: 3;
+
   }
 
   .homepage-details__image {
@@ -172,7 +174,7 @@
   }
 
   .dresses {
-    grid-row: 3;
+    grid-area: row3;
     grid-column: 2 / 10;
 
     h2 {
@@ -223,7 +225,6 @@
   grid-column-gap: 40px;
   grid-row-gap: 20px;
   grid-template-columns: 4% minmax(1fr, 46rem) 1fr 4%;
-  // grid-template-rows: repeat(auto-fit, auto);
 }
 
 .intro {
