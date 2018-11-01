@@ -6,7 +6,8 @@
 }
 
 .events-listing {
-  display: contents;
+  display: grid;
+  grid-column:  3 / 9;
 }
 
 .event__info {
@@ -30,7 +31,7 @@
   }
 }
 .event__info {
-  grid-column: 3 / 6;
+  grid-column: 3 / 5;
   text-align: left;
   @include mobile {
     grid-column: 3 / -2;
@@ -41,4 +42,6 @@
 .event {
   position: relative;
   border-bottom: 1px solid c(grey);
+  display: grid;
+  grid-template-columns: repeat(1fr, 10);
 }

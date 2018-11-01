@@ -95,19 +95,28 @@
   }
 
   .homepage-details {
-    grid-area: row2;
-    display: grid;
-    grid-gap: 2rem;
-    grid-template: "homedetailsimage homedetailsbuttons"auto / 1fr 1fr;
+    grid-column: 2 / 6;
+    grid-row: 3;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    // grid-gap: 2rem;
+    // grid-template-areas: "homedetailsimage homedetailsbuttons";
 
   }
 
   .homepage-details__image {
-    grid-area: homedetailsimage;
+    // grid-area: homedetailsimage;
+    img {
+      position: relative;
+      width: 100%;
+    }
   }
 
   .homepage-details__buttons {
-    grid-area: homedetailsbuttons;
+    // grid-area: homedetailsbuttons;
+    grid-column: 7 / 10;
+    grid-row: 3;
+    align-self: center;
   }
 
   @supports (display: contents) {
