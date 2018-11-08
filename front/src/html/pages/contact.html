@@ -16,19 +16,19 @@ path: contact
   <p>Leave us a message and we'll get back to you soon to arrange a booking.</p>
   <form name="contact" netlify>
     <label for="first-name">First name</label>
-    <input type="text" id="first-name" />
+    <input type="text" id="first-name" name="first-name" />
     <label for="last-name">Last name</label>
-    <input type="text" id="last-name" />
+    <input type="text" id="last-name"  name="last-name" />
     <label for="email">Your email address</label>
-    <input type="email" id="email" />
+    <input type="email" id="email" name="email" />
     <label for="phone">Your phone number</label>
-    <input type="tel" id="phone" />
+    <input type="tel" id="phone" name="phone" />
     <label for="wedding-date">Wedding date</label>
-    <input type="text" id="wedding-date" placeholder="Spring 2019" />
+    <input type="text" id="wedding-date" name="wedding-date" placeholder="Spring next year" />
     <label for="message">Your message</label>
-    <textarea id="message" rows="2" placeholder="Hello..."></textarea>
+    <textarea id="message" name="message" rows="2" placeholder="Hello..."></textarea>
     <label for="hear">Where did you hear about us?</label>
-    <textarea id="hear" rows="2" placeholder="eg. event, blog, word of mouth?"></textarea>
+    <textarea id="hear" name="hear" rows="2" placeholder="eg. event, blog, word of mouth?"></textarea>
     <input type="submit" class="button" value="Send">
   </form>
 </div>
