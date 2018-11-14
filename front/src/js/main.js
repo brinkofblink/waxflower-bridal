@@ -1,3 +1,4 @@
+import "./components/images";
 import "./components/data-js";
 import "./components/nav";
 import "./components/forms";
