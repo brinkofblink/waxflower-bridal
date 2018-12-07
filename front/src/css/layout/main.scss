@@ -276,3 +276,14 @@
   }
 }
 
+.generic_text {
+  width: 80%;
+  margin-left: 5%;
+  position: relative;
+  h1, h2, h3, h4, li, p {
+    max-width: 60ch;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+}
