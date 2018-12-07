@@ -29,25 +29,85 @@ images:
         </div>
     </div>
     <div class="shop-container__info">
-        <h1>Wifey for Lifey</h1>
-        <p class="price">£58.00</p>
+        <h1>"WIFEY FOR LIFEY " HAND EMBROIDERED UNISEX SWEATER<br>
+            - EXCLUSIVE-</h1>
+        <p class="price">£58.00 GBP</p>
+        <h2>Sizes</h2>
+        <div class="sizes">
+        <div>
+            <input type="radio" id="size-s" name="size" value="s" checked>
+            <label for="size-s">S</label>
+        </div>
+        <div>
+            <input type="radio" id="size-m" name="size" value="m">
+            <label for="size-m">M</label>
+        </div>
+        <div>
+            <input type="radio" id="size-l" name="size" value="l">
+            <label for="size-l">L</label>
+        </div>
+        <div>
+            <input type="radio" id="size-xl" name="size" value="xl">
+            <label for="size-xl">XL</label>
+        </div>
+        <div>
+            <input type="radio" id="size-xxl" name="size" value="xxl">
+            <label for="size-xxl">XXL</label>
+        </div>
+        </div>
+        <h2>Font</h2>
+        <div class="fonts">
+            <div>
+                <input type="radio" id="font-italic" name="font" value="italic" checked>
+                <label for="font-italic">Italic</label>
+            </div>
+            <div>
+                <input type="radio" id="font-non-italic" name="font" value="non-italic">
+                <label for="font-non-italic">Non italic</label>
+            </div>
+        </div>
+        <p class="helper">(See 'Frankie' image)</p>
         <button
+            id="addtocart"
             class="button snipcart-add-item"
             data-item-id="1"
             data-item-name="Wifey for Lifey Jumper"
             data-item-price="58.0"
             data-item-url="https://waxflowerbridal.co.uk/shop/wifey-for-lifey-jumper"
+            data-item-custom1-name="size"
+            data-item-custom1-options="S|M|L|XL|XXL"
+            data-item-custom1-value="S"
+            data-item-custom2-name="font"
+            data-item-custom2-options="italic|non-italic"
+            data-item-custom2-value="italic"
             data-item-description="Embroidered jumper">
                 Add to cart
         </button>
         <ul>
         <li>Carefully hand embroidered made-to- order by King Sophie's World</li>
-        <li>100% cotton unisex fit jumper</li>
+        <li>100% cotton classic unisex fit long sleeved sweatshirt</li>
         <li>Made-to- order , especially for you</li>
         <li>2 week lead-time</li>
         <li>plain back</li>
         <li>Worldwide shipping</li>
     </ul>
+    <p>The style of the jumper is oversized and not fitted, for exact measurements please feel free to email us.</p>
+    <p>Please double check what size you order. We cannot offer exchanges on sizes or refund jumpers once they have been ordered as they are made-to-order.</p>
     <p class="smaller">If you would like a different colour thread to the default red, please email us at (your email) with your order number after you have placed an order with info@waxflowerbridal.co.uk</p>
     </div>
 </div>
+
+
+<script>
+$(document).ready( function() {
+    $('[name="size"]').change(function() {
+        $('#addtocart').data('item-custom1-value', $(this).val());
+    })
+    $('[name="font"]').change(function() {
+        $('#addtocart').data('item-custom2-value', $(this).val());
+    })
+    $('#addtocart').on('click', function() {
+        alert($(this).data('item-custom1-value'))
+    })
+});
+</script>
