@@ -1,29 +1,30 @@
 ---
 title: Waxflower Bridal - Chepstow - Luxury Bridal Boutique
 description: Waxflower luxury bridal boutique. Shop for innovative and exciting wedding dresses and accessories by British designers.
-intro: Innovative and exciting collections by British designers
+intro: Specialising in chic, fashionable and contemporary luxury British bridalwear for the modern bride 🇬🇧
+carouselImages:
+  -
+    image: homepage/homepage-slide-1.jpg
+  -
+    image: homepage/homepage-slide-2.jpg
+  -
+    image: homepage/homepage-slide-3.jpg
+  -
+    image: homepage/homepage-slide-4.jpg
+  -
+    image: homepage/homepage-slide-5.jpg
 ---
 <div class="slider-wrap">
   <ul class="slider">
+    {{#each carouselImages}}
     <li class="slide">
-      <img data-src="https://res.cloudinary.com/waxflower-bridal/image/upload/w_auto,c_scale,dpr_auto,q_auto/homepage/homepage-slide-1.jpg" class="cld-responsive" alt="">
+      <img data-src="https://res.cloudinary.com/waxflower-bridal/image/upload/w_auto,c_scale,dpr_auto,q_auto/{{this.image}}" class="cld-responsive" alt="">
     </li>
-    <li class="slide">
-      <img data-src="https://res.cloudinary.com/waxflower-bridal/image/upload/w_auto,c_scale,dpr_auto,q_auto/homepage/homepage-slide-2.jpg" class="cld-responsive" alt="">
-    </li>
-    <li class="slide">
-      <img data-src="https://res.cloudinary.com/waxflower-bridal/image/upload/w_auto,c_scale,dpr_auto,q_auto/homepage/homepage-slide-3.jpg" class="cld-responsive" alt="">
-    </li>
-    <li class="slide">
-      <img data-src="https://res.cloudinary.com/waxflower-bridal/image/upload/w_auto,c_scale,dpr_auto,q_auto/homepage/homepage-slide-4.jpg" class="cld-responsive" alt="">
-    </li>
-    <li class="slide">
-      <img data-src="https://res.cloudinary.com/waxflower-bridal/image/upload/w_auto,c_scale,dpr_auto,q_auto/homepage/homepage-slide-5.jpg" class="cld-responsive" alt="">
-    </li>
+    {{/each}}
   </ul>
 </div>
  <div class="intro-block">
-  <h1>Specialising in chic, fashionable and contemporary luxury British bridalwear for the modern bride 🇬🇧</h1>
+  <h1>{{intro}}</h1>
   <a href="/designers.html" class="button">View our collection</a>
 </div>
 
