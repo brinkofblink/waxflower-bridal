@@ -14,12 +14,12 @@ media_library:
     output_filename_only: true
 
 collections:
-  - label: "Pages"
-    name: "pages"
+  - label: "Home"
+    name: "home"
     files:
       - name: "home" # Used in routes, e.g., /admin/collections/blog
         label: "Home" # Used in the UI
-        file: "html/pages/index.html" # The path to the folder where the documents are stored
+        file: "src/html/pages/index" # The path to the folder where the documents are stored
         create: false # Allow users to create new documents in this collection
         slug: "{{slug}}" # Filename
         extension: "html"
