@@ -8,6 +8,7 @@
 
 .main.index,
 .main.events,
+.main.shop,
 .main.designer,
 .main.wardrobe {
   min-height: calc(100vh - #{$header * 2});
@@ -182,7 +183,7 @@
     display: none;
   }
 
-  .dresses {
+  .dresses, .products {
     grid-area: row3;
     grid-column: 2 / 10;
 
@@ -225,6 +226,7 @@
 }
 
 .main.designers,
+.main.shop,
 .main.wardrobe,
 .main.about,
 .main.browse-all {
@@ -260,7 +262,7 @@
   }
 }
 
-.dresses {
+.dresses, .products {
   grid-row: 2;
   grid-column: 2 / 4;
   grid-gap: 4rem;

@@ -78,7 +78,7 @@
   }
 }
 
-.sizes, .fonts {
+.sizes, .fonts, .times {
   display: flex;
   justify-content: center;
   margin-bottom: 1rem;
@@ -111,4 +111,8 @@
       color: c(white);
     }
   }
+}
+
+.products .product a {
+  font-size: 0.8rem;
 }
