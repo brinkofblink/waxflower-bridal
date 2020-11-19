@@ -1,0 +1,10 @@
+import "./components/images";
+import "./components/data-js";
+// import "./components/page-load";
+import "./components/blog";
+import "./components/nav";
+import "./components/forms";
+import "./components/slider";
+import "./components/netlify";
+import "./components/gallery";
+import "./components/favourites";

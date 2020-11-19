@@ -1,0 +1,60 @@
+.dress, .product {
+  display: inline-flex;
+  position: relative;
+  &.big {
+    grid-column: auto / span 2;
+    grid-row: auto / span 2;
+  }
+  margin: 0;
+
+  .dress-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  .image {
+    position: relative;
+    width: 100%;
+    // height: 100%;
+    display: inline-flex;
+    justify-contnt: flex-start;
+    align-items: center;
+    padding: 0.2rem;
+  }
+
+  img {
+    position: relative;
+    // height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .button {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
+
+.main.designer .dresses .dress h2 {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  width: 98%;
+  background-color: c(black, light);
+}

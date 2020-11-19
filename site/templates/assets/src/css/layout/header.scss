@@ -1,0 +1,158 @@
+.header {
+  background-color: c(pink);
+
+  ul {
+    list-style: none;
+  }
+}
+
+.header__logo {
+  line-height: $header;
+  padding-top: 0.5rem;
+}
+
+.header__social ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__nav-toggle {
+  height: $header;
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+  box-shadow: none;
+  border: 1px solid c(black);
+  width: auto;
+  height: auto;
+  padding: 0.5rem 0.5rem;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.header__nav-toggle-sr-text {
+  @include sr-only;
+}
+
+.header {
+  display: grid;
+  padding: 10px 2%;
+  grid-gap: 20px;
+  grid-template-columns: 100px 1fr;
+  @include desktop-s {
+    grid-template-columns: 200px 1fr;
+  }
+  grid-template-rows: min-content;
+  grid-template-areas: "logo social";
+  align-items: start;
+  width: 100%;
+  .header__logo {
+    grid-area: logo;
+    padding-bottom: 2rem;
+    img {
+      @include tablet {
+        width: 150px;
+      }
+      @include desktop {
+        width: 200px;
+      }
+      @include mobile {
+        width: 100px;
+      }
+    }
+  }
+
+  .header__social {
+    grid-area: social;
+    padding-top: 1rem;
+
+    @include mobile {
+      grid-row: 1;
+      grid-column: 2 / 3;
+      padding-top: 0;
+      display: none;
+    }
+    .nav__link.button {
+      color: c(white, dark);
+      font-size: 1.4rem;
+      padding: 0.5rem 1rem;
+      @include mobile {
+        font-size: 1.2rem;
+        white-space: nowrap;
+        padding: 0.5rem 0.6rem;
+      }
+    }
+    ul {
+      padding-left: 0;
+      @include mobile {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  .wardrobe-link {
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    svg {
+      width: 1em;
+      height: 1em;
+      margin-right: 0.5rem;
+    }
+    @include mobile-and-tablet {
+      margin-top: 1rem;
+    }
+  }
+  .nav {
+    grid-area: nav;
+
+    @include mobile {
+      grid-row: 2;
+    }
+  }
+
+  .header-wrap {
+    display: contents;
+  }
+}
+
+.snipcart-checkout {
+  background: transparent;
+  border: none;
+  position: relative;
+  margin-top: -3px;
+  svg {
+    width: 36px;
+    height: 45px;
+  }
+  @include mobile-and-tablet {
+    margin-top: 1rem;
+    svg {
+      width: 20px;
+      height: auto;
+    }
+  }
+  .snipcart-items-count {
+    color: white;
+    position: absolute;
+    font-family: bebasregular;
+    font-size: 1.2rem;
+    left: 50%;
+    top: 38%;
+    text-align: center;
+    transform: translateX(-50%);
+  }
+}
+
+.search-icon {
+  margin: 0 0.5rem;
+  svg {
+    width: 40px;
+    transform: translate(0, 0.2rem);
+  }
+}

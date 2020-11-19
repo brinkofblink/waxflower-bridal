@@ -1,0 +1,37 @@
+dev_server:
+  domain: waxflower.localhost
+  port: 3001
+  back: true
+
+paths:
+  dist: dist
+
+  css:
+    watch: src/css/**/*.scss
+    entry:
+      - src/css/main.scss
+    include:
+      - node_modules
+
+  js:
+    watch: src/js/**/*.js
+    entry:
+      - src/js/main.js
+      - src/js/fonts.js
+    include:
+      - node_modules
+      - src/js/lib
+    exclude_loaders:
+      - node_modules
+
+  fonts:
+    watch: src/fonts/**/*
+    include:
+      - src/fonts/**/*
+    output_dir: webfonts
+
+  backend:
+    - ../**/*.{php}
+
+autoprefixer_compatibility:
+  - last 3 versions

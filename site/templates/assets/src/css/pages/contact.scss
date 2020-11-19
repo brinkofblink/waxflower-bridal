@@ -1,0 +1,94 @@
+.contact {
+  position: relative;
+  display: grid;
+  grid-template-columns: 4% repeat(6, 1fr) 4%;
+  grid-template-rows: auto;
+  width: 100%;
+  max-width: 100%;
+  grid-column-gap: 2rem;
+  grid-row-gap: 4rem;
+  grid-template-areas: ". a a a a a a ." ". b b b c c c ." ". d d d d d d ." ". . e e f f . .";
+  @include mobile-and-tablet {
+    grid-template-areas: ". a a a a a a ." ". b b b b b b ." ". c c c c c c ." ". d d d d d d ." ". e e e e e e ." ". f f f f f f .";
+  }
+  margin-bottom: 2rem;
+  p {
+    text-transform: initial;
+  }
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    background-color: c(pink);
+    content: "";
+    z-index: -1;
+  }
+}
+
+.contact__title {
+  grid-area: a;
+}
+
+.contact__intro {
+  grid-area: b;
+  color: c(grey, medium);
+  p {
+    max-width: 20rem;
+  }
+  a {
+    display: block;
+  }
+}
+
+.contact__form {
+  grid-area: c;
+  input,
+  select,
+  textarea {
+    max-width: 28rem;
+    padding-left: 0.3rem;
+  }
+  textarea {
+    padding-top: 0.3rem;
+  }
+  input[type="submit"] {
+    text-align: center;
+    padding-left: 2rem;
+  }
+  form {
+    margin-bottom: 1rem;
+  }
+}
+
+.contact__map {
+  grid-area: d;
+}
+
+.contact__location {
+  grid-area: e;
+  p {
+    color: c(grey, medium);
+  }
+}
+
+.contact__opening {
+  grid-area: f;
+  dl {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    color: c(grey, medium);
+    dt {
+      grid-column: 1;
+    }
+    dd {
+      grid-column: 2;
+    }
+  }
+  p {
+    color: c(grey, medium);
+  }
+}

@@ -1,0 +1,11 @@
+main.search {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+
+  form {
+    grid-column: 2;
+  }
+  .search-results {
+    grid-column: 2;
+  }
+}

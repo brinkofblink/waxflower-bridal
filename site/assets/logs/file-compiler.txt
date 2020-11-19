@@ -1,0 +1,78 @@
+2019-03-06 22:04:35	th_admin	http://waxflower-pw.localhost/	Compiled file: /site/templates/home.php
+2019-03-06 22:14:24	th_admin	http://waxflower-pw.localhost/	Compiled file: /site/templates/_main.php
+2019-03-06 22:14:59	th_admin	http://waxflower-pw.localhost/	Compiled file: /site/templates/_main.php
+2019-03-06 22:15:13	th_admin	http://waxflower-pw.localhost/	Compiled file: /site/templates/_main.php
+2019-03-06 22:40:07	th_admin	http://waxflower-pw.localhost/	Compiled file: /site/templates/_main.php
+2019-03-06 22:40:17	th_admin	http://waxflower-pw.localhost/	Compiled file: /site/templates/_main.php
+2019-03-06 22:40:53	th_admin	http://waxflower-pw.localhost/	Compiled file: /site/templates/_main.php
+2019-03-06 22:41:12	th_admin	http://waxflower-pw.localhost/	Compiled file: /site/templates/_main.php
+2019-03-06 22:41:34	th_admin	http://waxflower-pw.localhost/	Compiled file: /site/templates/_main.php
+2019-03-06 22:43:49	th_admin	http://waxflower-pw.localhost/	Compiled file: /site/templates/_main.php
+2019-03-06 22:47:21	th_admin	http://waxflower-pw.localhost/	Compiled file: /site/templates/_main.php
+2019-03-06 22:50:23	th_admin	http://waxflower-pw.localhost/	Compiled file: /site/templates/_main.php
+2019-03-06 22:50:34	th_admin	http://waxflower-pw.localhost/	Compiled file: /site/templates/_main.php
+2019-03-08 21:08:43	guest	http://waxflower-pw.localhost/about/	Compiled file: /site/templates/_main.php
+2019-03-09 13:34:54	th_admin	http://waxflower-pw.localhost/designers/dresses/halfpenny-london/	Compiled file: /site/templates/_main.php
+2019-03-09 13:36:02	th_admin	http://waxflower-pw.localhost/designers/dresses/halfpenny-london/	Compiled file: /site/templates/_main.php
+2019-03-09 15:26:39	th_admin	http://waxflower-pw.localhost/	Compiled file: /site/templates/_main.php
+2019-03-09 16:41:40	th_admin	http://waxflower-pw.localhost/admin/module/?reset=1	Compiled file: /site/modules/MarkupSEO/MarkupSEO.module
+2019-03-19 20:53:49	guest	http://waxflower-pw.localhost/admin	Maintenance/Copy new version of source file to target file: /site/templates/globals/_head.php => /site/assets/cache/FileCompiler/site/templates/globals/_head.php
+2019-03-19 20:53:49	guest	http://waxflower-pw.localhost/admin	Maintenance/Copy new version of source file to target file: /site/templates/home.php => /site/assets/cache/FileCompiler/site/templates/home.php
+2019-03-19 20:53:49	guest	http://waxflower-pw.localhost/admin	Maintenance/Copy new version of source file to target file: /site/templates/contact.php => /site/assets/cache/FileCompiler/site/templates/contact.php
+2019-03-26 20:31:13	guest	http://waxflower-pw.localhost/	Maintenance/Copy new version of source file to target file: /site/templates/designer.php => /site/assets/cache/FileCompiler/site/templates/designer.php
+2019-06-02 16:20:12	?	?	Compiled file: /site/modules/MarkupSEO/MarkupSEO.module
+2019-06-02 16:20:12	guest	http://waxflower-pw.localhost/	Compiled file: /site/templates/_main.php
+2019-07-11 20:51:16	guest	http://waxflower-pw.localhost/http404/	Maintenance/Copy new version of source file to target file: /site/templates/designer.php => /site/assets/cache/FileCompiler/site/templates/designer.php
+2019-10-27 15:13:53	?	?	Compiled file: /site/modules/MarkupSEO/MarkupSEO.module
+2019-10-27 15:13:53	guest	http://waxflower-pw.localhost/	Maintenance/Copy new version of source file to target file: /site/templates/designer.php => /site/assets/cache/FileCompiler/site/templates/designer.php
+2019-10-27 15:13:53	guest	http://waxflower-pw.localhost/	Maintenance/Copy new version of source file to target file: /site/templates/events.php => /site/assets/cache/FileCompiler/site/templates/events.php
+2019-10-27 15:20:50	th_admin	http://waxflower-pw.localhost/admin/module/download/	Compiled file: /site/modules/SchedulePages/SchedulePages.module
+2019-10-27 15:26:30	th_admin	http://waxflower-pw.localhost/admin/module/download/	Compiled file: /site/modules/TextformatterVideoEmbed/TextformatterVideoEmbed.module
+2019-10-27 15:33:33	th_admin	http://waxflower-pw.localhost/blog/demo-blog-post/	Compiled file: /site/templates/_main.php
+2019-10-27 15:54:46	th_admin	http://waxflower-pw.localhost/admin/module/download/	Compiled file: /site/modules/TextformatterOEmbed/TextformatterOEmbed.module
+2020-10-27 07:32:26	?	?	Compiled file: /site/modules/SchedulePages/SchedulePages.module
+2020-10-27 07:32:26	?	?	Compiled file: /site/modules/MarkupSEO/MarkupSEO.module
+2020-10-27 07:32:26	guest	http://waxflower-pw.localhost/	Maintenance/Copy new version of source file to target file: /site/templates/_main.php => /site/assets/cache/FileCompiler/site/templates/_main.php
+2020-10-27 07:32:26	guest	http://waxflower-pw.localhost/	Maintenance/Copy new version of source file to target file: /site/templates/about.php => /site/assets/cache/FileCompiler/site/templates/about.php
+2020-10-27 07:46:32	guest	http://waxflower.localhost/http404/	Compiled file: /site/templates/_main.php
+2020-10-27 07:47:00	th_admin	http://waxflower.localhost/admin/module/?reset=1	Compiled file: /site/modules/TextformatterOEmbed/TextformatterOEmbed.module
+2020-10-27 07:47:00	th_admin	http://waxflower.localhost/admin/module/?reset=1	Compiled file: /site/modules/TextformatterVideoEmbed/TextformatterVideoEmbed.module
+2020-10-29 19:30:50	th_admin	http://waxflower.test/admin/module/?reset=1	Compiled file: /site/modules/ClearCacheAdmin/ClearCacheAdmin.module.php
+2020-10-29 19:39:27	guest	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
+2020-10-29 19:40:07	guest	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
+2020-10-29 20:18:37	guest	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
+2020-10-29 20:34:26	guest	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
+2020-10-29 21:10:24	guest	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
+2020-11-03 08:24:48	guest	http://waxflower.localhost/	Maintenance/Copy new version of source file to target file: /site/templates/blog-post.php => /site/assets/cache/FileCompiler/site/templates/blog-post.php
+2020-11-03 08:24:48	guest	http://waxflower.localhost/	Maintenance/Copy new version of source file to target file: /site/templates/events.php => /site/assets/cache/FileCompiler/site/templates/events.php
+2020-11-03 08:24:48	guest	http://waxflower.localhost/	Maintenance/Copy new version of source file to target file: /site/templates/blog.php => /site/assets/cache/FileCompiler/site/templates/blog.php
+2020-11-03 08:24:48	guest	http://waxflower.localhost/	Maintenance/Copy new version of source file to target file: /site/templates/basic-page.php => /site/assets/cache/FileCompiler/site/templates/basic-page.php
+2020-11-03 08:38:44	guest	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
+2020-11-03 19:06:04	guest	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
+2020-11-03 19:50:52	guest	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
+2020-11-03 19:51:58	guest	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
+2020-11-03 19:52:47	guest	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
+2020-11-03 20:00:39	guest	http://waxflower.localhost/designers/accessories/	Compiled file: /site/templates/_main.php
+2020-11-03 20:01:14	guest	http://waxflower.localhost/designers/accessories/	Compiled file: /site/templates/_main.php
+2020-11-03 20:02:20	guest	http://waxflower.localhost/designers/accessories/	Compiled file: /site/templates/_main.php
+2020-11-03 20:02:42	guest	http://waxflower.localhost/designers/accessories/	Compiled file: /site/templates/_main.php
+2020-11-03 20:03:58	guest	http://waxflower.localhost/designers/accessories/	Compiled file: /site/templates/_main.php
+2020-11-03 20:04:57	guest	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
+2020-11-03 20:20:43	guest	http://waxflower.localhost/designers/dresses/house-of-ollichon/	Compiled file: /site/templates/_main.php
+2020-11-03 20:20:51	guest	http://waxflower.localhost/designers/dresses/house-of-ollichon/	Compiled file: /site/templates/_main.php
+2020-11-04 21:11:04	th_admin	http://waxflower.localhost/admin/module/download/	Compiled file: /site/modules/InstagramBasicDisplayApi/InstagramBasicDisplayApi.module
+2020-11-04 21:11:04	th_admin	http://waxflower.localhost/admin/module/download/	Compiled file: /site/modules/InstagramBasicDisplayApi/InstagramBasicDisplayApiConfig.php
+2020-11-11 20:47:13	guest	http://waxflower.localhost/	Maintenance/Copy new version of source file to target file: /site/templates/_main.php => /site/assets/cache/FileCompiler/site/templates/_main.php
+2020-11-11 20:47:14	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Compiled file: /site/templates/_main.php
+2020-11-11 20:55:06	guest	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
+2020-11-11 20:55:20	guest	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
+2020-11-11 20:56:11	guest	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
+2020-11-11 20:56:41	guest	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
+2020-11-11 20:57:00	guest	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
+2020-11-11 20:57:55	guest	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
+2020-11-11 21:01:58	guest	http://waxflower.localhost/designers/dresses/house-of-ollichon/	Compiled file: /site/templates/_main.php
+2020-11-11 21:02:17	guest	http://waxflower.localhost/designers/dresses/house-of-ollichon/	Compiled file: /site/templates/_main.php
+2020-11-11 21:10:04	guest	http://waxflower.localhost/designers/dresses/house-of-ollichon/	Compiled file: /site/templates/_main.php
+2020-11-11 21:10:48	guest	http://waxflower.localhost/designers/dresses/house-of-ollichon/	Compiled file: /site/templates/_main.php
+2020-11-11 21:13:21	guest	http://waxflower.localhost/designers/dresses/halfpenny-london/	Compiled file: /site/templates/_main.php
+2020-11-11 21:14:26	guest	http://waxflower.localhost/designers/dresses/halfpenny-london/	Compiled file: /site/templates/_main.php

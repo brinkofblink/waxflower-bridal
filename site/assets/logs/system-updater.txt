@@ -1,0 +1,28 @@
+2019-03-06 21:33:00	Update #8: Completed!
+2019-03-06 21:33:00	Update #9: Initializing update
+2019-03-06 21:33:00	Update #9: Added: Pages > Recent
+2019-03-06 21:33:00	Update #9: Completed!
+2019-03-06 21:33:09	Update #10: Initializing update
+2019-03-06 21:33:09	Update #10: Installed ProcessLogger and added: Setup > Logs
+2019-03-06 21:33:09	Update #10: Installed InputfieldIcon
+2019-03-06 21:33:09	Update #10: Completed!
+2019-03-06 21:33:22	Update #11: Initializing update
+2019-03-06 21:33:22	Update #11: Completed!
+2019-03-06 21:33:23	Update #12: Initializing update
+2019-03-06 21:33:23	Update #12: Added 'published' column to pages table
+2019-03-06 21:33:23	Update #12: Populated values to 'published' for 43 pages
+2019-03-06 21:33:23	Update #12: Completed!
+2019-03-06 21:33:23	Update #13: Initializing update
+2019-03-06 21:33:23	Update #13: Completed!
+2019-03-06 21:33:23	Update #14: Initializing update
+2019-03-06 21:33:23	Update #14: Completed!
+2019-03-06 21:33:24	Update #15: Initializing update
+2019-03-06 21:33:24	Update #15: Completed!
+2019-03-06 21:33:24	Update #16: Initializing update
+2019-03-06 21:33:24	Update #16: Completed!
+2020-10-27 07:46:32	Update #17: Initializing update
+2020-10-27 07:46:32	WARNING: Update #17: Update skipped because Apache not detected. Please <a href='https://processwire.com/blog/posts/pw-3.0.135/' target='_blank'>see this post</a> for details on how to apply this update manually.
+2020-10-27 07:46:32	Update #17: Details: <a href='https://processwire.com/blog/posts/pw-3.0.135/' target='_blank'>https://processwire.com/blog/posts/pw-3.0.135/</a>
+2020-10-27 07:46:32	Update #17: Completed!
+2020-10-27 07:46:33	Update #18: Initializing update
+2020-10-27 07:46:35	Update #18: Completed!

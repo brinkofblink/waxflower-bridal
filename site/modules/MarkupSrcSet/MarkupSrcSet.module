@@ -1,0 +1,297 @@
+<?php namespace ProcessWire;
+
+/**
+ * Processwire module for generating srcset markup.
+ * by Roland Toth (tpr)
+ *
+ * ProcessWire 3.x
+ * Copyright (C) 2011 by Ryan Cramer
+ * Licensed under GNU/GPL v2, see LICENSE.TXT
+ *
+ * http://www.processwire.com
+ * http://www.ryancramer.com
+ *
+ */
+
+/**
+ * Class MarkupSrcSet
+ *
+ * @package ProcessWire
+ */
+class MarkupSrcSet extends WireData implements Module, ConfigurableModule
+{
+
+    public $configData;
+
+    /**
+     * Basic information about module
+     */
+    public static function getModuleInfo()
+    {
+        return array(
+            'title'     => 'MarkupSrcSet',
+            'summary'   => __('Generate srcset markup with ease.', __FILE__),
+            'href'      => 'http://modules.processwire.com/modules/markup-src-set/',
+            'version'   => 12,
+            'author'    => 'Roland Toth',
+            'autoload'  => 'template!=admin',
+            'singular'  => true,
+            'permanent' => false,
+            'icon'      => 'cubes'
+        );
+    }
+
+    /**
+     * Default configuration for module
+     *
+     */
+    static public function getDefaultData()
+    {
+        return array(
+            "loadScripts" => 1
+        );
+    }
+
+    public function __toString()
+    {
+        return __CLASS__;
+    }
+
+
+    /**
+     * Hooks and global functions.
+     *
+     * @throws WireException
+     */
+    public function ready()
+    {
+        $this->configData = $this->wire('modules')->getModuleConfigData($this);
+
+        $this->addHook("Pageimage::srcset", $this, "getSrcSet");
+
+        if (isset($this->configData['loadScripts']) && $this->configData['loadScripts'] != "") {
+            $this->addHookAfter('Page::render', $this, 'loadScripts');
+        }
+
+        // add transparent data uri fallback to $config
+        $this->wire('config')->srcsetFallbackDataUri = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+    }
+
+
+    /**
+     * Prepare parameters and call the markup generator method.
+     *
+     * @return bool
+     */
+    protected function getSrcSet(HookEvent $event)
+    {
+        $args = $event->arguments;
+
+        // at least one set must be provided
+        if (empty($args)) {
+            return false;
+        }
+
+        // prepend $img to the arguments
+        array_unshift($args, $event->object);
+
+        $event->return = call_user_func_array(array($this, 'generateSrcSetMarkup'), $args);
+    }
+
+
+    /**
+     * Generate srcset markup.
+     *
+     * IMPORTANT - add to CSS: img[data-sizes="auto"] { display: block; width: 100%; }
+     *
+     * @param $img           ProcessWire Pageimage object
+     * @param $sets          string image set
+     * @param array $options ProcessWire's image resize options
+     *
+     * @return bool|string
+     */
+    public function generateSrcSetMarkup($img, $sets = null, $options = null)
+    {
+        $srcSetString = "";
+        $imgSizes = array();
+        $srcSets = array();
+
+        if (!($img instanceof Pageimage) || is_null($sets)) {
+            return false;
+        }
+
+        $srcsetArray = $this->stringToArray($sets, ',');
+
+        if (!is_array($srcsetArray)) {
+            return false;
+        }
+
+        // get sets in array format
+        for ($ii = 0; $ii < count($srcsetArray); $ii++) {
+
+            $set = $srcsetArray[$ii];
+            $currentSize = false;
+
+            if ($set === '0x0') {
+                continue;
+            }
+
+            // first item must be width x height string (no multiplier nor divisor allowed)
+            if ($ii === 0) {
+
+                // stop if it's not in WxH format
+                if (strpos($set, 'x') === false) {
+                    if (is_numeric($set) && (int)$set > 0) {    // if it's only a number, assume Wx0
+                        $set = $set . 'x0';
+                    } elseif ($set === "original") {    // use the original image dimensions if "original" keyword is used
+                        $set = $img->width . '_originalx' . $img->height;
+                    } else {
+                        return false;
+                    }
+                }
+
+                $currentSize = $this->stringToArray($set, 'x');
+
+            } else {
+
+                if (strpos($set, '/') === 0) {
+
+                    // divisor, eg. "/3" - calculate values from first item of $imgSizes
+                    $divisor = (double)ltrim($set, '/');
+
+                    if ($divisor > 0) {
+                        $currentSize = array_map(function ($item) use ($divisor) {
+                            return (int)$item / $divisor;
+                        }, reset($imgSizes));
+                    }
+
+                } elseif (strpos($set, '*') === 0) {
+
+                    // multiplier, eg. "*3" - calculate values from first item of $imgSizes
+                    $multiplier = (double)ltrim($set, '*');
+
+                    if ($multiplier > 0) {
+                        $currentSize = array_map(function (&$item) use ($multiplier) {
+                            return (int)$item * $multiplier;
+                        }, reset($imgSizes));
+                    }
+
+                } else {
+                    // no divisor nor multiplier
+                    $currentSize = $this->stringToArray($set, 'x', 'int');
+                }
+            }
+
+            if ($currentSize) {
+                $imgSizes[] = $currentSize;
+            }
+        }
+
+        if (empty($imgSizes)) {
+            return false;
+        }
+
+        // create associative array of resized images, use widths as keys
+        foreach ($imgSizes as $set) {
+            if (strpos($set[0], "_original") !== false) {
+                $currentImage = $img;
+            } else {
+                $currentImage = $img->size($set[0], $set[1], $options);
+            }
+
+            $srcSets[$currentImage->width] = $currentImage->url;
+        }
+
+        // build srcset string + add helpers
+
+        $srcsetUrls = array();
+        $counter = 0;
+
+        foreach ($srcSets as $width => $url) {
+            $srcsetUrls[$counter] = $url;
+            $srcSetString .= $url . ' ' . $width . 'w,';
+            $counter++;
+        }
+
+        $keys = array_keys($srcSets);
+        natsort($keys);
+
+        $srcsetUrls['smallest'] = $srcSets[reset($keys)];
+        $srcsetUrls['largest'] = $srcSets[array_pop($keys)];
+
+        $img->srcsetUrls = $srcsetUrls;
+
+        return rtrim($srcSetString, ',');
+    }
+
+
+    /**
+     * Append JavaScript assets to document body.
+     */
+    public function loadScripts(HookEvent $event)
+    {
+
+        $html = $event->return;
+
+        // do not load scripts if no lazysize image found
+        if (strpos($html, ' data-srcset=') === false && strpos($html, ' data-bgset=') === false) {
+            return;
+        }
+
+        $jsUrl = wire('config')->urls->{$this->className} . 'scripts/markupsrcset.js';
+
+//        order:
+//        ls.respimg
+//        ls.bgset
+//        ls.attrchange
+//        lazysizes
+
+        $event->return = str_replace("</body>",
+            '<script src="' . $jsUrl . '" async></script></body>', $html);
+    }
+
+
+    // explode string by a separator + trim + remove empty items
+    protected function stringToArray($str, $separator, $format = 'string')
+    {
+        if (strpos($str, $separator) === false) {
+            return false;
+        }
+        $arr = explode($separator, $str);
+        $arr = array_map('trim', $arr); //trim whitespace
+        //	$arr = array_filter($arr, 'trim');  // remove empty items (removes 0x200 too!)
+        $arr = array_filter($arr, function ($value) {
+            return ($value !== null && $value !== false && $value !== '');
+        });
+        if ($format === 'int') {
+            $arr = array_map('intval', $arr);
+        }
+
+        return $arr;
+    }
+
+
+    /**
+     * Return an InputfieldWrapper of Inputfields used to configure the class.
+     */
+    public static function getModuleConfigInputfields(array $data)
+    {
+
+        $defaultData = self::getDefaultData();
+        $data = array_merge($defaultData, $data);
+
+        $wrapper = new InputfieldWrapper();
+
+        $fieldName = 'loadScripts';
+        $f = wire('modules')->get("InputfieldCheckbox");
+        $f->attr('name', $fieldName);
+        $f->label = __('Load scripts', __FILE__);
+        $f->description = __('Uncheck to disable auto-loading JavaScript assets (e.g if you would like to load manually).',
+            __FILE__);
+        $f->notes = __('Scripts are loaded only if there is data-srcset or data-bgset in the markup.', __FILE__);
+        $f->attr('checked', (isset($data[$fieldName]) && $data[$fieldName] == '1') ? 'checked' : '');
+        $wrapper->add($f);
+
+        return $wrapper;
+    }
+}

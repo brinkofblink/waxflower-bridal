@@ -1,0 +1,22 @@
+2019-03-06 21:33:23	th_admin	http://waxflower-pw.localhost/admin/login/	Successful login for 'th_admin'
+2019-03-06 21:36:20	th_admin	http://waxflower-pw.localhost/admin/login/	Successful login for 'th_admin'
+2019-03-08 21:07:15	?	?	User 'th_admin' - Session timed out (session older than 86400 seconds) (IP: 127.0.0.1)
+2019-03-08 21:09:03	th_admin	http://waxflower-pw.localhost/admin/login/	Successful login for 'th_admin'
+2019-03-19 20:53:49	?	?	User 'th_admin' - Session timed out (session older than 86400 seconds) (IP: 127.0.0.1)
+2019-03-19 20:53:56	th_admin	http://waxflower-pw.localhost/admin/login/	Successful login for 'th_admin'
+2019-03-24 18:47:34	?	?	User 'th_admin' - Session timed out (session older than 86400 seconds) (IP: 127.0.0.1)
+2019-03-26 20:36:53	th_admin	http://waxflower-pw.localhost/admin/login/	Successful login for 'th_admin'
+2019-06-02 16:20:12	?	?	User 'th_admin' - Session timed out (session older than 86400 seconds) (IP: 127.0.0.1)
+2019-06-06 18:29:04	th_admin	http://waxflower-pw.localhost/admin/login/	Successful login for 'th_admin'
+2019-06-06 19:14:02	?	?	User 'th_admin' - Error: Session fingerprint changed (IP address or useragent) (IP: 127.0.0.1)
+2019-07-11 20:51:31	th_admin	http://waxflower-pw.localhost/admin/login/	Successful login for 'th_admin'
+2019-08-06 19:39:10	?	?	User 'th_admin' - Session timed out (session older than 86400 seconds) (IP: 127.0.0.1)
+2019-08-06 20:07:13	th_admin	http://waxflower-pw.localhost/admin/login/	Successful login for 'th_admin'
+2019-10-27 15:14:52	th_admin	http://waxflower-pw.localhost/admin/login/	Successful login for 'th_admin'
+2019-10-27 17:09:43	?	?	User 'th_admin' - Error: Session fingerprint changed (IP address or useragent) (IP: 127.0.0.1)
+2019-12-22 17:07:28	th_admin	http://waxflower-pw.localhost/admin/login/	Successful login for 'th_admin'
+2020-10-27 07:46:51	th_admin	http://waxflower.localhost/admin/login/	Successful login for 'th_admin'
+2020-10-29 19:05:08	th_admin	http://waxflower.localhost/admin/login/	Successful login for 'th_admin'
+2020-11-04 19:58:48	th_admin	http://waxflower.localhost/admin/login/	Successful login for 'th_admin'
+2020-11-11 21:27:24	th_admin	http://waxflower.localhost/admin/login/	Successful login for 'th_admin'
+2020-11-16 18:31:46	th_admin	http://waxflower.localhost/admin/login/	Successful login for 'th_admin'

@@ -1,0 +1,45 @@
+2019-03-06 21:47:43	th_admin	http://waxflower-pw.localhost/admin/setup/field/send-templates-save?id=98	Deleted field "carousel" data in 0 row(s) from 0 page(s) using template "home". [page-by-page]
+2019-03-06 22:20:42	th_admin	http://waxflower-pw.localhost/admin/setup/template/removeFields	Deleted field "carousel_images" data in 0 row(s) from 0 page(s) using template "designer". [page-by-page]
+2019-03-06 23:11:19	th_admin	http://waxflower-pw.localhost/admin/setup/template/removeFields	Deleted field "about_kathy" data in 0 row(s) from 0 page(s) using template "about". [page-by-page]
+2019-03-06 23:11:19	th_admin	http://waxflower-pw.localhost/admin/setup/template/removeFields	Deleted field "image" data in 0 row(s) from 0 page(s) using template "about". [page-by-page]
+2019-03-06 23:11:19	th_admin	http://waxflower-pw.localhost/admin/setup/template/removeFields	Deleted field "text_area" data in 0 row(s) from 0 page(s) using template "about". [page-by-page]
+2019-03-06 23:11:19	th_admin	http://waxflower-pw.localhost/admin/setup/template/removeFields	Deleted field "about_kathy_END" data in 0 row(s) from 0 page(s) using template "about". [page-by-page]
+2019-03-08 21:33:26	th_admin	http://waxflower-pw.localhost/admin/setup/template/removeFields	Deleted field "price_text" data in 0 row(s) from 0 page(s) using template "events". [page-by-page]
+2019-03-08 21:38:14	th_admin	http://waxflower-pw.localhost/admin/setup/field/send-templates-save?id=116	Deleted field "day" data in 0 row(s) from 0 page(s) using template "contact". [page-by-page]
+2019-03-09 11:01:46	th_admin	http://waxflower-pw.localhost/admin/setup/field/send-templates-save?id=120	Deleted field "faq" data in 0 row(s) from 0 page(s) using template "faqs". [page-by-page]
+2019-03-09 11:43:56	th_admin	http://waxflower-pw.localhost/admin/page/sort/	Updated sort for 3 pages
+2019-03-09 12:38:07	th_admin	http://waxflower-pw.localhost/admin/setup/field/send-templates-save?id=126	Deleted field "options" data in 0 row(s) from 0 page(s) using template "repeater_variations". [page-by-page]
+2019-10-27 15:22:22	th_admin	http://waxflower-pw.localhost/admin/blog/	Updating schema version of 'blog_comments' from  to 6
+2020-10-27 07:46:33	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'filesize' to DB schema for 'blog_files' (FieldtypeFile)
+2020-10-27 07:46:33	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'filesize' to DB schema for 'blog_images' (FieldtypeImage)
+2020-10-27 07:46:33	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'created_users_id' to DB schema for 'blog_images' (FieldtypeImage)
+2020-10-27 07:46:33	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'modified_users_id' to DB schema for 'blog_images' (FieldtypeImage)
+2020-10-27 07:46:33	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'width' to DB schema for 'blog_images' (FieldtypeImage)
+2020-10-27 07:46:33	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'height' to DB schema for 'blog_images' (FieldtypeImage)
+2020-10-27 07:46:33	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'ratio' to DB schema for 'blog_images' (FieldtypeImage)
+2020-10-27 07:46:33	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'filesize' to DB schema for 'carousel_images' (FieldtypeImage)
+2020-10-27 07:46:33	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'created_users_id' to DB schema for 'carousel_images' (FieldtypeImage)
+2020-10-27 07:46:33	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'modified_users_id' to DB schema for 'carousel_images' (FieldtypeImage)
+2020-10-27 07:46:33	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'width' to DB schema for 'carousel_images' (FieldtypeImage)
+2020-10-27 07:46:33	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'height' to DB schema for 'carousel_images' (FieldtypeImage)
+2020-10-27 07:46:33	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'ratio' to DB schema for 'carousel_images' (FieldtypeImage)
+2020-10-27 07:46:34	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'filesize' to DB schema for 'image' (FieldtypeImage)
+2020-10-27 07:46:34	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'created_users_id' to DB schema for 'image' (FieldtypeImage)
+2020-10-27 07:46:34	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'modified_users_id' to DB schema for 'image' (FieldtypeImage)
+2020-10-27 07:46:34	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'width' to DB schema for 'image' (FieldtypeImage)
+2020-10-27 07:46:34	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'height' to DB schema for 'image' (FieldtypeImage)
+2020-10-27 07:46:34	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'ratio' to DB schema for 'image' (FieldtypeImage)
+2020-10-27 07:46:34	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'filesize' to DB schema for 'product_images' (FieldtypeImage)
+2020-10-27 07:46:34	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'created_users_id' to DB schema for 'product_images' (FieldtypeImage)
+2020-10-27 07:46:34	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'modified_users_id' to DB schema for 'product_images' (FieldtypeImage)
+2020-10-27 07:46:34	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'width' to DB schema for 'product_images' (FieldtypeImage)
+2020-10-27 07:46:34	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'height' to DB schema for 'product_images' (FieldtypeImage)
+2020-10-27 07:46:34	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'ratio' to DB schema for 'product_images' (FieldtypeImage)
+2020-10-27 07:46:34	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'filesize' to DB schema for 'shop_image' (FieldtypeImage)
+2020-10-27 07:46:34	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'created_users_id' to DB schema for 'shop_image' (FieldtypeImage)
+2020-10-27 07:46:34	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'modified_users_id' to DB schema for 'shop_image' (FieldtypeImage)
+2020-10-27 07:46:34	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'width' to DB schema for 'shop_image' (FieldtypeImage)
+2020-10-27 07:46:35	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'height' to DB schema for 'shop_image' (FieldtypeImage)
+2020-10-27 07:46:35	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Added 'ratio' to DB schema for 'shop_image' (FieldtypeImage)
+2020-11-03 08:24:48	guest	http://waxflower.localhost/	Added 'created_users_id' to DB schema for 'blog_files' (FieldtypeFile)
+2020-11-03 08:24:48	guest	http://waxflower.localhost/	Added 'modified_users_id' to DB schema for 'blog_files' (FieldtypeFile)
