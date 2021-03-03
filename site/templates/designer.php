@@ -16,7 +16,7 @@
 <?php $linked_dress = $sanitizer->text($input->urlSegment(1)) ?: ""; ?>
 <div class="dresses" data-lightbox="<?= $linked_dress ?>">
 <?php $page->products->each(function($p) use($linked_dress, $page) { ?>
-  <div class="dress<?php if ($p->big) { echo " big"; } ?>">
+  <div class="dress<?php if ($p->big) { echo " big"; } ?>" id="<?= $p->name ?>">
     <a class="image" href="<?= $p->image->url ?>" data-size="670x1000" data-gallery>
       <img data-pin-description="<?= $p->title ?> dress by <?= $page->title ?> at Waxflower Bridal" data-pin-media="<?= $p->image->httpUrl ?>" data-srcset="<?= $p->image->srcset('670x1000,/1.5,/2,/3,/4') ?>" data-src="<?= $p->image->srcsetUrls['smallest'] ?>" data-sizes="auto" class="lazyload" alt="">
     </a>

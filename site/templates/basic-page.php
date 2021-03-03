@@ -9,7 +9,10 @@
     $dressIds = $sanitizer->array(json_decode($input->cookie('favouriteDresses'))); ?>
     <div class='wardrobe dresses'>
     <?php
-    $dressIds = $dressIds.implode($dressIds, "|");
+    $dressIds = $dressIds ? implode("|", $dressIds) : "";
+    if ($dressIds === "") { ?>
+      <p>You can add dresses to your wardrobe by clicking the hearts next to their names.</p>
+    <?php } else {
     $dresses = $pages->find("template=product,id=$dressIds");
     $dresses->each(function($p) { ?>
       <div class="dress">
@@ -23,6 +26,7 @@
       <a href="<?= $p->parent->url ?>"><h2><?= $p->title ?> <?php include './partials/_heart.php' ?></h2></a>
     </div>
     <?php }) ?>
+  <?php } ?>
     </div>
   <?php }
   ?>

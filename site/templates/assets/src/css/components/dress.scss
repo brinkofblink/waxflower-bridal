@@ -37,12 +37,22 @@
     padding: 0.2rem;
   }
 
+  p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    @include mobile {
+      max-width: 100% ;
+    }
+  }
+
   img {
     position: relative;
     // height: 100%;
-    width: 100%;
-    object-fit: cover;
-    display: block;
+    @include desktop {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
   }
 
   .button {
@@ -57,4 +67,9 @@
   color: white;
   width: 98%;
   background-color: c(black, light);
+}
+
+.view-designers-wrap .dress .image + a.button {
+  margin-left: 1rem;
+  margin-top: 1rem;
 }

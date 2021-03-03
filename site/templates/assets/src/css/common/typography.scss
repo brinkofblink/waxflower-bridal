@@ -41,14 +41,6 @@
   src: url('webfonts/375542_1_0.eot?#iefix') format('embedded-opentype'), url('webfonts/375542_1_0.woff2') format('woff2'), url('webfonts/375542_1_0.woff') format('woff'), url('webfonts/375542_1_0.ttf') format('truetype');
 }
 
-@font-face {
-  font-family: 'bebasregular';
-  src: url('webfonts/Bebas-Regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
 body {
   font-family: "BrandonGrotesque";
   text-transform: uppercase;
@@ -62,7 +54,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: bebasregular;
+  font-family: 'Bebas Neue';
   font-weight: normal;
 }
 
@@ -78,5 +70,13 @@ h1 {
 }
 
 .button {
-  font-family: bebasregular;
+  font-family: 'Bebas Neue';
+}
+
+@mixin peg-board {
+  font-family: 'Bebas Neue';
+  font-size: 2rem;
+  line-height: 1.6;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
 }

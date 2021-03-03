@@ -8,6 +8,8 @@ html {
   }
 }
 
+:focus:not(:focus-visible) { outline: none }
+
 *,
 *::before,
 *::after {
@@ -23,7 +25,7 @@ html {
   }
 }
 
-body {
+.page-wrap {
   color: c(black);
 
   a {
@@ -31,8 +33,8 @@ body {
   }
   display: grid;
   grid-template-columns: 4rem 1fr;
-  grid-template-rows: min-content 1fr min-content;
-  grid-template-areas: "sidenav header" "sidenav main" "sidenav footer";
+  grid-template-rows: min-content 1fr min-content min-content;
+  grid-template-areas: "sidenav header" "sidenav main" "sidenav signup" "sidenav footer";
 }
 
 .side-menu {
@@ -43,6 +45,9 @@ body {
 }
 .main {
   grid-area: main;
+}
+.signup {
+  grid-area: signup;
 }
 .footer {
   grid-area: footer;

@@ -69,7 +69,6 @@
   .header__social {
     grid-area: social;
     padding-top: 1rem;
-
     @include mobile {
       grid-row: 1;
       grid-column: 2 / 3;
@@ -77,9 +76,8 @@
       display: none;
     }
     .nav__link.button {
-      color: c(white, dark);
-      font-size: 1.4rem;
-      padding: 0.5rem 1rem;
+      font-size: 1.2rem;
+      padding: 0.3rem 0.6rem;
       @include mobile {
         font-size: 1.2rem;
         white-space: nowrap;
@@ -87,22 +85,33 @@
       }
     }
     ul {
-      padding-left: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
       @include mobile {
         display: flex;
         flex-wrap: wrap;
       }
     }
+    li {
+      margin: 0 0.5rem;
+    }
+    .pipe {
+      position: relative;
+      height: 1.5rem;
+      width: 1px;
+      background-color: c(black);
+    }
   }
+
 
   .wardrobe-link {
     width: auto;
     display: inline-flex;
     align-items: center;
     svg {
-      width: 1em;
-      height: 1em;
-      margin-right: 0.5rem;
+      width: 1.8em;
+      height: 1.8em;
     }
     @include mobile-and-tablet {
       margin-top: 1rem;
@@ -121,14 +130,43 @@
   }
 }
 
+
+.header__social li form {
+  svg {
+    width: 25px;
+    transform: translate(0, 0.2rem);
+    margin-right: 0.5rem;
+  }
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem 1rem;
+  margin-top: 0.8rem;
+  input {
+    font-family: 'Bebas Neue';
+    color: c(black);
+    font-size: 1.2rem;
+    background-color: transparent;
+    appearance: none;
+    border: none;
+    border-bottom: 1px solid c(black);
+    font-size: 1.2rem;
+  }
+}
+
+.header {
+  ::placeholder {
+    color: c(black);
+  }
+}
+
 .snipcart-checkout {
   background: transparent;
   border: none;
   position: relative;
   margin-top: -3px;
   svg {
-    width: 36px;
-    height: 45px;
+    width: 30px;
   }
   @include mobile-and-tablet {
     margin-top: 1rem;
@@ -140,19 +178,11 @@
   .snipcart-items-count {
     color: white;
     position: absolute;
-    font-family: bebasregular;
-    font-size: 1.2rem;
+    font-family: 'Bebas Neue';
+    font-size: 1rem;
     left: 50%;
     top: 38%;
     text-align: center;
     transform: translateX(-50%);
-  }
-}
-
-.search-icon {
-  margin: 0 0.5rem;
-  svg {
-    width: 40px;
-    transform: translate(0, 0.2rem);
   }
 }

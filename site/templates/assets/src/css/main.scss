@@ -3,20 +3,20 @@
 @import './common/vars';
 @import './common/colours';
 @import './common/typography';
-@import './common/grid';
 @import './common/base';
-@import './components/body';
+
 @import './components/buttons';
 @import './components/dress';
 @import './components/forms';
-@import './components/tables';
 @import './components/slider';
 @import './components/luminous-theme';
 @import './components/instagram';
+
 @import './layout/header';
 @import './layout/nav';
 @import './layout/main';
 @import './layout/footer';
+
 @import './pages/home';
 @import './pages/about';
 @import './pages/faq';

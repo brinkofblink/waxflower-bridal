@@ -6,12 +6,12 @@
   width: 100%;
   max-width: 100%;
   grid-column-gap: 2rem;
-  grid-row-gap: 4rem;
-  grid-template-areas: ". a a a a a a ." ". b b b c c c ." ". d d d d d d ." ". . e e f f . .";
+  grid-row-gap: 1rem;
+  grid-template-areas: ". a a a a a a ." "b b b b b b b b" ". c c c d d d ." ". e e e e e e ." ". f f f f f f ."  "g g g g g g g g";
   @include mobile-and-tablet {
-    grid-template-areas: ". a a a a a a ." ". b b b b b b ." ". c c c c c c ." ". d d d d d d ." ". e e e e e e ." ". f f f f f f .";
+    grid-template-areas: ". a a a a a a ." "b b b b b b b b" ". c c c c c c ." ". d d d d d d ." ". e e e e e e ." ". f f f f f f ."  "g g g g g g g g";
   }
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   p {
     text-transform: initial;
   }
@@ -29,11 +29,13 @@
 
 .contact__title {
   grid-area: a;
+  h1 {
+    letter-spacing: 1rem;
+  }
 }
 
 .contact__intro {
-  grid-area: b;
-  color: c(grey, medium);
+  grid-area: c;
   p {
     max-width: 20rem;
   }
@@ -42,8 +44,27 @@
   }
 }
 
+.contact__images-top, .contact__images-bottom {
+  grid-area: b;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 0;
+  a {
+    display: block;
+    position: relative;
+  }
+  img {
+    position: relative;
+    width: 100%;
+  }
+}
+
+.contact__images-bottom {
+  grid-area: g;
+}
+
 .contact__form {
-  grid-area: c;
+  grid-area: d;
   input,
   select,
   textarea {
@@ -56,6 +77,8 @@
   input[type="submit"] {
     text-align: center;
     padding-left: 2rem;
+    padding-right: 2rem;
+    margin-top: 1rem;
   }
   form {
     margin-bottom: 1rem;
@@ -63,32 +86,24 @@
 }
 
 .contact__map {
-  grid-area: d;
-}
-
-.contact__location {
   grid-area: e;
-  p {
-    color: c(grey, medium);
-  }
 }
 
 .contact__opening {
   grid-area: f;
   dl {
     display: grid;
-    grid-template-columns: auto auto 1fr;
+    grid-template-columns: 1fr auto auto 1fr;
     grid-template-rows: auto;
     grid-gap: 1rem;
-    color: c(grey, medium);
     dt {
-      grid-column: 1;
+      grid-column: 2;
     }
     dd {
-      grid-column: 2;
+      grid-column: 3;
     }
   }
   p {
-    color: c(grey, medium);
+    text-align: center;
   }
 }

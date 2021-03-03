@@ -3,7 +3,27 @@ $base: #4C4C4C;
 $bg: #fff;
 $accent: #fff;
 $white: #fff;
-$palettes: (white: (base: #ffffff, dark: #fafafa), grey: (base: #4C4C4C, medium: #727174), black: (base: #0B0B0B, light: #191a1b), pink: (base: hsla(8, 87%, 93%, 1), bright: #FC9FC3));
+$palettes: (
+  white: (
+    base: #ffffff,
+    dark: #fafafa
+  ),
+  grey: (
+    base: #4C4C4C,
+    medium: #727174
+  ),
+  black: (
+    base: #0B0B0B,
+    light: #191a1b
+  ),
+  pink: (
+    base: hsla(8, 87%, 93%, 1),
+    bright: #FC9FC3
+  ),
+  yellow: (
+    base: #ffda26
+  )
+);
 
 @function c($palette, $tone: 'base') {
   @return map-get(map-get($palettes, $palette), $tone);

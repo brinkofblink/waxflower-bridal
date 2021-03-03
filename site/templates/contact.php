@@ -8,8 +8,15 @@
   <div class="contact__intro">
     <?=$page->text_area?>
   </div>
+  <div class="contact__images-top" data-lightbox="contact">
+    <?php foreach ($page->carousel_images as $img) { ?>
+      <a class="image" href="<?= $img->url ?>" data-size="670x1000" data-gallery>
+        <img data-srcset="<?= $img->srcset('670x1000,/1.5,/2,/3,/4') ?>" data-src="<?= $img->srcsetUrls['smallest'] ?>" data-sizes="auto" class="lazyload" alt="">
+      </a>
+    <?php } ?>
+  </div>
   <div class="contact__form" id="contact-form">
-    <h2>Say hello...</h2>
+    <h2>Form to fill out...</h2>
     <p>Leave us a message and we'll get back to you soon to arrange a booking.</p>
     <form name="contact" action="https://formspree.io/info@waxflowerbridal.co.uk" method="post">
       <label for="first-name">First name<sup>*</sup></label>
@@ -30,15 +37,13 @@
       <textarea id="message" name="message" rows="2" placeholder="Hello..."></textarea>
       <label for="hear">Where did you hear about us?</label>
       <input type="text" id="hear" name="hear" placeholder="eg. event, blog, word of mouth?"/>
+      <input type="checkbox" name="mailing-list" id="mailing-list">
+      <label for="mailing-list">Join our mailing list?</label><br>
       <input type="submit" class="button" value="Send">
     </form>
   </div>
   <div class="contact__map">
       <iframe src="https://snazzymaps.com/embed/92396" width="100%" height="400px" style="border:none;"></iframe>
-  </div>
-  <div class="contact__location">
-    <h2>Location</h2>
-      <?=$page->address?>
   </div>
   <div class="contact__opening">
   <h2>Opening times</h2>
@@ -49,5 +54,12 @@
   });?>
     </dl>
     <p><?=$page->notes?></p>
+  </div>
+  <div class="contact__images-bottom" data-lightbox="contact">
+    <?php foreach ($page->more_images as $img) { ?>
+      <a class="image" href="<?= $img->url ?>" data-size="670x1000" data-gallery>
+        <img data-srcset="<?= $img->srcset('670x1000,/1.5,/2,/3,/4') ?>" data-src="<?= $img->srcsetUrls['smallest'] ?>" data-sizes="auto" class="lazyload" alt="">
+      </a>
+    <?php } ?>
   </div>
 </div>
