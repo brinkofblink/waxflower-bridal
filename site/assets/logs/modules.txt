@@ -136,3 +136,25 @@
 2020-11-04 21:11:04	th_admin	http://waxflower.localhost/admin/module/download/	Saved module info caches
 2020-11-04 21:11:06	th_admin	http://waxflower.localhost/admin/module/	Installed module 'InstagramBasicDisplayApi'
 2020-11-04 21:11:06	th_admin	http://waxflower.localhost/admin/module/	Saved module info caches
+2020-11-19 17:50:43	th_admin	http://waxflower.localhost/admin/module/download/	Saved module info caches
+2020-11-19 17:50:44	th_admin	http://waxflower.localhost/admin/module/download/	Saved module info caches
+2020-11-19 17:50:52	th_admin	http://waxflower.localhost/admin/module/	Installed module 'StaticWire'
+2020-11-19 17:50:52	th_admin	http://waxflower.localhost/admin/module/	Saved module info caches
+2020-11-19 17:51:22	th_admin	http://waxflower.localhost/admin/module/edit?name=StaticWire	Saved module 'StaticWire' config data
+2020-12-15 18:13:52	th_admin	http://waxflower.localhost/admin/module/	Installed module 'InputfieldToggle'
+2020-12-15 18:13:53	th_admin	http://waxflower.localhost/admin/module/	Saved module info caches
+2020-12-15 18:13:54	th_admin	http://waxflower.localhost/admin/module/edit?name=InputfieldToggle	Saved module 'InputfieldToggle' config data
+2020-12-15 18:14:25	th_admin	http://waxflower.localhost/admin/module/	Installed module 'FieldtypeToggle'
+2020-12-15 18:14:25	th_admin	http://waxflower.localhost/admin/module/	Saved module info caches
+2020-12-15 18:14:26	th_admin	http://waxflower.localhost/admin/module/edit?name=FieldtypeToggle	Saved module 'FieldtypeToggle' config data
+2020-12-15 18:14:28	th_admin	http://waxflower.localhost/admin/module/edit?name=FieldtypeToggle&collapse_info=1	Saved module 'FieldtypeToggle' config data
+2020-12-15 18:23:17	th_admin	http://waxflower.localhost/admin/module/download/	Saved module info caches
+2020-12-15 18:23:18	th_admin	http://waxflower.localhost/admin/module/download/	Saved module info caches
+2020-12-15 18:23:20	th_admin	http://waxflower.localhost/admin/module/	Saved module 'ProcessRedirects' config data
+2020-12-15 18:23:20	th_admin	http://waxflower.localhost/admin/module/	Installed module 'ProcessRedirects'
+2020-12-15 18:23:21	th_admin	http://waxflower.localhost/admin/module/	Saved module info caches
+2020-12-15 18:23:27	th_admin	http://waxflower.localhost/admin/module/edit?name=ProcessRedirects	Saved module 'ProcessRedirects' config data
+2020-12-15 18:23:33	th_admin	http://waxflower.localhost/admin/setup/redirects/edit/?id=0	Installed module 'TextformatterMarkdownExtra'
+2020-12-15 18:23:33	th_admin	http://waxflower.localhost/admin/setup/redirects/edit/?id=0	Saved module info caches
+2020-12-15 18:24:17	th_admin	http://waxflower.localhost/admin/module/edit?name=ProcessRedirects	Uninstalled module 'ProcessRedirects'
+2020-12-15 18:24:17	th_admin	http://waxflower.localhost/admin/module/edit?name=ProcessRedirects	Saved module info caches
