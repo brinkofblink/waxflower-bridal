@@ -10,19 +10,11 @@
 .main.events,
 .main.shop,
 .main.designer,
-.main.wardrobe {
+.main.wardrobe,
+.main.browse-all {
   min-height: calc(100vh - #{$header * 2});
-  display: grid;
   padding: 10px 0;
   width: 100%;
-  grid-column-gap: 10px;
-  grid-row-gap: 20px;
-  grid-template-columns: 4% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 4%;
-  @include mobile-and-tablet {
-    grid-template-columns: 4% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 4%;
-  }
-  grid-template-rows: auto;
-
   &:before {
      position: absolute;
     top: 0;
@@ -34,138 +26,9 @@
     z-index: -1;
   }
 
-  .slider-wrap {
-    grid-row: 1;
-    .hero {
-      grid-row: 1;
-    }
-  }
-  .slider-wrap, .sample-sale-wrap, .visit-showroom-wrap,
-  .hero {
-    grid-column: 1/-1;
-    position: relative;
 
-    h1 {
-      position: absolute;
-      top: 2rem;
-      left: 4%;
-      color: c(black);
-
-      &.light {
-        color: #fff;
-      }
-    }
-
-    img {
-      width: 100%;
-    }
-    .sample-sale, .visit-showroom {
-      list-style: none;
-      padding-left: 0;
-    }
-  }
-
-  .sample-sale .slide, .visit-showroom .slide {
-    display: grid;
-    justify-content: stretch;
-    justify-items: center;
-    align-items: center;
-    > * {
-      grid-column: 1;
-    }
-    img {
-      grid-row: 1/5;
-    }
-    h2  {
-      grid-row: 2;
-      margin-top: auto;
-    }
-    a  {
-      grid-row: 3;
-      margin-bottom: auto;
-    }
-    h2 {
-      font-weight: normal;
-      font-size: 5rem;
-      color: white;
-      text-shadow: -1px 1px 0px rgba(c(pink, bright), 1), -2px 4px 8px rgba(c(pink), 0.5);
-      margin-bottom: 4rem;
-      @include mobile-and-tablet {
-        font-size: 3.2rem;
-        // margin-bottom: 0.5rem;
-      }
-    }
-  }
-
-  .intro-block {
-    grid-row: 1;
-  }
-
-  .intro-block, .designer-details {
-    grid-column: 1/-1;
-    z-index: 2;
-    text-align: center;
-    align-self: center;
-    margin-bottom: 0;
-
-    @include mobile-and-tablet {
-      grid-column: 2 / 10;
-      margin-bottom: -1rem;
-    }
-
-    h1 {
-      font-weight: normal;
-      font-size: 5rem;
-      color: white;
-      text-shadow: -1px 1px 0px rgba(c(pink, bright), 1), -2px 4px 8px rgba(c(pink), 0.5);
-      @include mobile-and-tablet {
-        font-size: 3.2rem;
-        // margin-bottom: 0.5rem;
-      }
-    }
-
-    h2 {
-      @include peg-board;
-    }
-
-    p,
-    small {
-      font-family: "BrandonGrotesque";
-      color: black;
-      display: block;
-      text-transform: initial;
-      // margin: 0 auto;
-      // border-radius: 0px;
-      // background-color: rgba(193, 151, 144, 0.6);
-      // backdrop-filter: blur(20px);
-      color: #fff;
-      display: inline-flex;
-      padding:0.1rem 1rem;
-      // text-align: left;
-    }
-
-    > div {
-      display: flex;
-      flex-direction: column;
-      * + * {
-        margin-top: 1rem;
-      }
-    }
-
-    a.button {
-      margin-top: 0rem;
-    }
-
-    small+a.button, a.button+small {
-      margin-top: 1rem;
-    }
-  }
 
   .designer-details {
-    grid-column: 3/-3;
-    @include mobile-and-tablet {
-      grid-column: 1/-1;
-    }
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -178,11 +41,6 @@
       line-height: 1.5;
       max-width: 60ch;
     }
-  }
-
-  .whats-new-wrap {
-    grid-column: 2 / 6;
-    grid-row: 3;
   }
 
   .whats-new-wrap__image {
@@ -212,12 +70,25 @@
     .whats-new-wrap,
     .event, .view-designers-wrap {
       grid-column: auto / auto;
-      display: contents;
+      display: grid;
       margin-top: 2rem;
       grid-gap: inherit;
     }
 
-    .whats-new, .view-designers {
+    .view-designers {
+      grid-column: 1/11;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr;
+      @include tablet {
+        // grid-template-columns: 22rem 1fr;
+      }
+
+    }
+    .whats-new {
+      background-color: c(yellow);
+    }
+    .whats-new {
       grid-column: 1/11;
       position: relative;
       display: grid;
@@ -225,13 +96,12 @@
       @include tablet {
         grid-template-columns: 22rem 1fr;
       }
-      background-color: c(yellow);
       > div:first-of-type {
         display: inline-flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        padding-left: 1rem;
+        padding-left: 2rem;
         padding-right: 0;
         width: auto;
         @include tablet {
@@ -249,6 +119,7 @@
           text-align: left;
         }
       }
+
       .whats-new-slider, .view-designers-slider {
         display: inline-flex;
         padding: 10px 20px;
@@ -350,7 +221,7 @@
 
     .homepage-reviews {
       grid-row: 5;
-      grid-column: 2 / 10;
+      grid-column: 1 / 11;
       @include desktop-s {
         grid-column: 2 / 10;
         margin-top: 2rem;
@@ -390,7 +261,7 @@
   }
 
   .dresses, .products, .view-designers-wrap {
-    grid-column: 2 / 10;
+    // grid-column: 2 / 10;
     h2 {
       font-size: 1.1rem;
       width: 100%;
@@ -517,7 +388,7 @@
 }
 
 .view-designers-wrap {
-  grid-column: 1 / 7;
+  grid-row: 3;
   grid-template-columns: 1fr;
   position: relative;
   .dress {
@@ -532,7 +403,7 @@
   .tns-controls {
     display: flex;
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 0;
     &:focus {
       outline: none;

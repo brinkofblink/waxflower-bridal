@@ -113,3 +113,6 @@
 2021-02-07 16:44:24	guest	http://waxflower.localhost/	Maintenance/Copy new version of source file to target file: /site/templates/contact.php => /site/assets/cache/FileCompiler/site/templates/contact.php
 2021-02-15 20:14:50	guest	http://waxflower.localhost/	Maintenance/Copy new version of source file to target file: /site/templates/designers.php => /site/assets/cache/FileCompiler/site/templates/designers.php
 2021-03-03 08:51:02	th_admin	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
+2021-03-06 09:41:49	guest	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
+2021-03-06 09:42:00	guest	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
+2021-03-06 09:44:30	guest	http://waxflower.localhost/	Compiled file: /site/templates/_main.php

@@ -34,4 +34,4 @@ paths:
     - ../**/*.{php}
 
 autoprefixer_compatibility:
-  - last 3 versions
+  - last 2 versions

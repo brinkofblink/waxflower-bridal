@@ -49,3 +49,7 @@
 2021-02-16 12:53:43	th_admin	http://waxflower.localhost/admin/login/	Successful login for 'th_admin'
 2021-03-02 08:15:44	th_admin	http://waxflower.localhost/admin/login/	Successful login for 'th_admin'
 2021-03-03 08:07:55	th_admin	http://waxflower.localhost/admin/login/	Successful login for 'th_admin'
+2021-03-06 10:06:01	th_admin	http://waxflower.localhost/admin/login/	Successful login for 'th_admin'
+2021-03-06 10:09:23	?	?	User 'th_admin' - Error: Session fingerprint changed (IP address or useragent) (IP: 127.0.0.1)
+2021-03-06 10:15:34	th_admin	http://waxflower.localhost/admin/login/	Successful login for 'th_admin'
+2021-03-08 21:30:54	th_admin	http://waxflower.localhost/admin/login/	Successful login for 'th_admin'

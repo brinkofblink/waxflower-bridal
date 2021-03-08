@@ -3,9 +3,9 @@
 <div pw-replace="main" class="designer">
 <div class="hero">
     <img data-srcset="<?= $page->image->srcset('1930x800,/1.5,/2,/3,/4') ?>" data-sizes="auto" class="lazyload" alt="">
-</div>
-<div class="intro-block">
-    <h1<?php if ($page->light_text) { echo " class='light'"; }?>><?= $page->title ?></h1>
+    <div class="intro-block">
+        <h1<?php if ($page->light_text) { echo " class='light'"; }?>><?= $page->title ?></h1>
+    </div>
 </div>
 <div class="designer-details">
 <div><?= $page->text_area ?></div>

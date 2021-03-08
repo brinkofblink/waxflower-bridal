@@ -42,7 +42,12 @@
 
 .homepage-reviews {
   display: grid;
-  grid-template-columns: 100px 1fr 100px;
+  position: relative;
+  max-width: 100%;
+  grid-template-columns: 20px minmax(0, 1fr) 20px;
+  @include desktop-s {
+    grid-template-columns: 100px minmax(0, 1fr) 100px;
+  }
   align-items: center;
   position: relative;
   > h2 {
@@ -51,17 +56,58 @@
     font-size: 2rem;
     margin-bottom: 2rem;
   }
+  img {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
   .previous-review:hover img {
     animation: wiggle-left 0.6s 1 alternate;
   }
+  .previous-review {
+    margin: $p/2;
+  }
   .next-review:hover img {
     animation: wiggle-right 0.6s 1 alternate;
+  }
+  .next-review {
+    margin: $p/2;
+  }
+  .homepage-review-cards > div {
+    &::before {
+      position: relative;
+      display: block;
+      content: "“";
+      text-align: center;
+      font-family: serif;
+      line-height: 1;
+      transform-origin: top center;
+      transform: scale(6);
+      @include desktop-s {
+        transform: scale(10);
+      }
+      margin-bottom: 4rem;
+    }
+    &::after {
+      position: relative;
+      display: block;
+      content: "”";
+      text-align: center;
+      font-family: serif;
+      line-height: 1;
+      transform-origin: top center;
+      transform: scale(6);
+      @include desktop-s {
+        transform: scale(10);
+      }
+      margin-bottom: 4rem;
+    }
   }
   .homepage-review-cards div {
     // position: relative;
     // width: 90%;
     > * {
-      background-color: #fff;
+      // background-color: #fff;
       margin-bottom: 0;
       padding-top: $p/2;
       padding-bottom: $p/2;
@@ -72,9 +118,13 @@
     border-radius: 4px;
   }
   p {
-    padding: 0 1rem;
+    padding: 0 0rem;
     text-transform: uppercase;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    @include desktop-s {
+      padding: 0 1rem;
+      font-size: 0.85rem;
+    }
   }
 
   .tns-controls {

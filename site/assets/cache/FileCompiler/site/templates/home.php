@@ -6,13 +6,13 @@
     <?php $page->carousel_images->each(function($child) { ?>
       <li class="slide">
         <!-- <img data-src="https://res.cloudinary.com/waxflower-bridal/image/upload/w_auto,c_scale,dpr_auto,q_auto/<?= $child->url ?>" class="cld-responsive" alt=""> -->
-        <img src="<?= $child->srcsetUrls['smallest'] ?>" data-srcset="<?= $child->srcset('1930x800,/1.5,/2,/3,/4') ?>" data-sizes="auto" class="lazyload" alt="">
+        <img src="<?= $child->srcsetUrls['smallest'] ?>" data-srcset="<?= $child->srcset('1930x1000,/1.5,/2,/3,/4') ?>" data-sizes="auto" class="lazyload" alt="">
       </li>
     <?php }) ?>
   </ul>
-</div>
-<div class="intro-block">
-  <h1>Celebrating individuality</h1>
+  <div class="intro-block">
+    <h1>Celebrating individuality</h1>
+  </div>
 </div>
 <div class="designer-details">
   <h2>About Waxflower Bridal</h2>

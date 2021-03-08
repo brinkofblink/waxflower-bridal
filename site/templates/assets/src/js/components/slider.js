@@ -27,18 +27,22 @@ Ready(() => {
       container: reviews,
       mouseDrag: true,
       rewind: false,
-      loop: false,
       swipeAngle: false,
       speed: 400,
       items: 1,
       nav: false,
       controlsPosition: 'bottom',
       center: true,
-      controlsText: ["<", ">"],
-      edgePadding: 100,
-      gutter: 100,
+      edgePadding: 10,
+      gutter: 10,
       prevButton: '.previous-review',
       nextButton: '.next-review',
+      responsive: {
+        900: {
+          edgePadding: 100,
+          gutter: 100,
+        }
+      }
       // autoWidth: true
     });
   }
