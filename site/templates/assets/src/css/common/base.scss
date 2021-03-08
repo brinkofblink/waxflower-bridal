@@ -2,7 +2,9 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
-
+  ::selection {
+    background: c(pink, bright);
+  }
   @include mobile {
     font-size: 12px;
   }

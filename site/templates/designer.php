@@ -8,10 +8,8 @@
     </div>
 </div>
 <div class="designer-details">
-<div><?= $page->text_area ?></div>
-<p><?= $page->price_text ?></p>
-<a href="/contact.html" class="button">Book now</a>
-<small>To arrange an appointment</small>
+    <div><?= $page->text_area ?></div>
+    <p><?= $page->price_text ?></p>
 </div>
 <?php $linked_dress = $sanitizer->text($input->urlSegment(1)) ?: ""; ?>
 <div class="dresses" data-lightbox="<?= $linked_dress ?>">
@@ -20,9 +18,14 @@
     <a class="image" href="<?= $p->image->url ?>" data-size="670x1000" data-gallery>
       <img data-pin-description="<?= $p->title ?> dress by <?= $page->title ?> at Waxflower Bridal" data-pin-media="<?= $p->image->httpUrl ?>" data-srcset="<?= $p->image->srcset('670x1000,/1.5,/2,/3,/4') ?>" data-src="<?= $p->image->srcsetUrls['smallest'] ?>" data-sizes="auto" class="lazyload" alt="">
     </a>
-  <h2><?= $p->title ?> <?php include './partials/_heart.php' ?></h2>
+    <h2><?= $p->title ?></h2>
+    <?php include './partials/_heart.php' ?>
+    </div>
+    <?php }) ?>
 </div>
-<?php }) ?>
+<div class="dress-booking">
+    <p>To try on <?= $page->title ?></p>
+    <a href="/contact" class="button">Book an appointment</a>
 </div>
 </div>
 
