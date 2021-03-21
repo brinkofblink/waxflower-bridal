@@ -39,13 +39,19 @@
     right: $p*2;
     z-index: 1;
   }
-  .image {
+  .image, .video {
     position: relative;
     width: 100%;
     display: inline-flex;
-    justify-contnt: flex-start;
+    justify-content: flex-start;
     align-items: center;
-    padding: 0.2rem;
+    padding: 0;
+  }
+
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 46vw;
   }
 
   p {
@@ -58,12 +64,10 @@
 
   img {
     position: relative;
-    // height: 100%;
-    @include desktop {
-      width: 100%;
-      object-fit: cover;
-      display: block;
-    }
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    height: auto;
   }
 
   .button {
@@ -76,13 +80,24 @@
   position: absolute;
   bottom: 0;
   color: white;
-  width: 98%;
+  width: 100%;
   background-color: rgba(c(black, light), 0.8);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  @include mobile-and-tablet {
+    opacity: 1;
+  }
+}
+
+.main.designer .dresses .dress:hover {
+  h2 {
+    opacity: 1;
+  }
 }
 
 .main.designer .dresses {
-  grid-row-gap: 1rem;
-  grid-column-gap: 1rem;
+  grid-row-gap: 2rem;
+  grid-column-gap: 2rem;
 }
 
 .dress-booking {
@@ -96,12 +111,30 @@
   }
 }
 
-.view-designers-wrap .dress .image + a.button {
-  margin-left: 1rem;
-  margin-top: 1rem;
+.view-designers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 4rem;
+  grid-column: 2/-2;
+  @include mobile-and-tablet {
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1/-1;
+    grid-column-gap: 1rem;
+    padding: 0 2%;
+  }
 }
 
-.view-designers-wrap .dress .image {
+.view-designers .dress .image, .video + a.button {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  @include mobile-and-tablet {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
+.view-designers .dress .image, .video {
     display: grid;
     justify-content: stretch;
     align-items: center;
@@ -134,4 +167,11 @@
     &:hover img {
       filter: brightness(1);
     }
+}
+
+[data-current="designers"] main h2 {
+  @include peg-board;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-top: 3rem;
 }

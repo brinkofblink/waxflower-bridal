@@ -38,7 +38,7 @@ if(!defined("PROCESSWIRE")) die();
  * @var bool
  *
  */
-$config->debug = true;
+$config->debug = false;
 
 
 /*** INSTALLER CONFIG ********************************************************************/
@@ -103,3 +103,5 @@ $config->useMarkupRegions = true;
 $config->appendTemplateFile = '_main.php';
 
 $config->noHTTPS = true;
+
+setlocale(LC_ALL,'en_GB.UTF-8');

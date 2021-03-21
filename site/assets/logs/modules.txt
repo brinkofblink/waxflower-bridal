@@ -158,3 +158,12 @@
 2020-12-15 18:23:33	th_admin	http://waxflower.localhost/admin/setup/redirects/edit/?id=0	Saved module info caches
 2020-12-15 18:24:17	th_admin	http://waxflower.localhost/admin/module/edit?name=ProcessRedirects	Uninstalled module 'ProcessRedirects'
 2020-12-15 18:24:17	th_admin	http://waxflower.localhost/admin/module/edit?name=ProcessRedirects	Saved module info caches
+2021-03-10 21:06:05	th_admin	http://waxflower.localhost/admin/module/	Saved module info caches
+2021-03-10 21:06:05	th_admin	http://waxflower.localhost/admin/module/?reset=1	Saved module info caches
+2021-03-10 21:06:08	th_admin	http://waxflower.localhost/admin/module/	Saved module 'FieldtypeVideo' config data
+2021-03-10 21:06:08	th_admin	http://waxflower.localhost/admin/module/	Installed module 'InputfieldVideo'
+2021-03-10 21:06:08	th_admin	http://waxflower.localhost/admin/module/	Installed module 'FieldtypeVideo'
+2021-03-10 21:06:08	th_admin	http://waxflower.localhost/admin/module/	Saved module info caches
+2021-03-10 21:06:17	th_admin	http://waxflower.localhost/admin/module/edit?name=FieldtypeVideo	Saved module 'FieldtypeVideo' config data
+2021-03-19 21:30:57	th_admin	http://waxflower.localhost/admin/module/edit?name=FieldtypeVideo&collapse_info=1	Saved module 'FieldtypeVideo' config data
+2021-03-19 21:38:34	th_admin	http://waxflower.localhost/admin/module/?reset=1	Saved module info caches

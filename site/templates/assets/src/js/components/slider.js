@@ -3,7 +3,7 @@ import {
   tns
 } from 'tiny-slider/src/tiny-slider';
 
-Ready(() => {
+window.onload = () => {
   const sliderEl = document.querySelector('.slider');
   const reviews = document.querySelector('.homepage-review-cards');
   const whatsNew = document.querySelector('.whats-new-slider');
@@ -108,4 +108,4 @@ Ready(() => {
     }
     });
   }
-})
+}

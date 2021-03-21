@@ -5,3 +5,7 @@
 .lum-lightbox-image-wrapper {
   padding: 2rem;
 }
+
+.lum-lightbox.lum-open {
+  z-index: 1;
+}

@@ -1,30 +1,24 @@
-.about {
+.main.about {
   position: relative;
   display: grid;
-  grid-template-columns: 4% repeat(5, 1fr) 4%;
-  grid-template-rows: auto;
-  width: 100%;
-  max-width: 100%;
-  grid-column-gap: 2rem;
-  grid-row-gap: 4rem;
-  grid-template-areas:
-  ". a a a a a ."
-  ". b b b b b ."
-  ". c c c c . ."
-  ". e e e e e ."
-  ". f f f f f .";
-  @include mobile-and-tablet {
-    grid-template-areas:
-    ". a a a a a ."
-    ". b b b b b ."
-    ". c c c c c ."
-    ". d d d d d ."
-    ". e e e e e ."
-    ". f f f f f .";
+  grid-template-columns: minmax(0, 1fr);
+  @include desktop-s {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
+  padding: 0 4%;
+  grid-template-rows: auto;
+  width: 96%;
+  max-width: 96%;
+  grid-column-gap: 2rem;
+  grid-row-gap: 0;
   p {
     text-transform: initial;
-    max-width: 32rem;
+    max-width: 42rem;
+    img {
+      position: relative;
+      width: auto;
+      height: auto;
+    }
   }
   &:before {
     position: absolute;
@@ -32,82 +26,83 @@
     left: 0;
     right: 0;
     height: 30%;
-    background-color: c(pink);
     content: "";
     z-index: -1;
   }
 }
 
 .about__title {
-  grid-area: a;
+  grid-column: 1/-1;
+  grid-row: 2;
+  text-align: center;
 }
-.about__story {
-  grid-area: b;
-  display: grid;
-  grid-column-gap: 4rem;
-  grid-template-rows: auto;
-  grid-template-columns: minmax(auto, 20rem) 1fr;
-  @include mobile-and-tablet {
-    grid-template-columns: 1fr 2fr;
-  }
+.about__block {
+  position: relative;
   img {
     position: relative;
     width: 100%;
-    // margin-left: 8vw;
-    // grid-column: 1;
+    height: auto;
+  }
+  h2 {
+    @include peg-board;
+  }
+  p {
+    @include desktop-s {
+      max-width: 100% !important;
+    }
   }
 }
-.about__owner {
-  grid-area: c;
+
+.about__block-divider {
+  position: absolute;
+  right: -0.5rem;
+  top: 2rem;
+  bottom: 0;
+  border-right: 1px solid c(pink, bright);
+  @include mobile {
+    display: none;
+  }
+}
+
+.about__block--full {
+  border-top: 1px solid c(pink, bright);
+  padding-top: $p;
+}
+
+.about__block--full {
+  grid-column: 1/-1;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr;
+  grid-template-columns: minmax(0, 1fr);
+  @include desktop-s {
+    grid-template-columns: minmax(0, 1fr) auto auto minmax(0, 1fr);
+  }
+  gap: $p;
+  .about__cta {
+    grid-column: 1/-1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  img {
+    width: 26%;
+    height: auto;
+  }
   div {
-    grid-column: 1 / 4;
-    grid-row: 1;
-    z-index: 2;
-  }
-  img {
-    grid-row: 1;
-    grid-column: 3 / 6;
-    z-index: 0;
-    justify-self: end;
-  }
-}
-.about__boutique {
-  grid-area: c;
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  grid-gap: 2rem;
-  img {
-    margin-top: 5rem;
-  }
-  @include mobile-and-tablet {
-    img {
-      width: 25vw;
+    @include desktop-s {
+      grid-column: 2;
     }
-  }
-}
-.about__british-designers {
-  grid-area: e;
-  display: grid;
-  grid-template-columns: minmax(20rem, 1fr) 1fr ;
-  grid-column-gap: 4rem;
-  img {
-    position: relative;
-    width: 100%;
-  }
-  @include mobile-and-tablet {
+    display: flex;
     div {
-      grid-column: 1 / 3;
+      display: flex;
+      flex-direction: column;
+      padding-left: $p;
     }
   }
-}
-.about__name {
-  grid-area: f;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  @include mobile-and-tablet {
-    grid-template-columns: 1fr;
+  h2 {
+    text-align: left;
+    margin-bottom: 0;
+    p {
+      max-width: 42ch;
+    }
   }
 }

@@ -7,9 +7,9 @@
   max-width: 100%;
   grid-column-gap: 2rem;
   grid-row-gap: 1rem;
-  grid-template-areas: ". a a a a a a ." "b b b b b b b b" ". c c c d d d ." ". e e e e e e ." ". f f f f f f ."  "g g g g g g g g";
+  grid-template-areas: "a a a a a a a a" ". b b b b b b ." ". c c c d d d ." ". e e e e e e ." ". f f f f f f ."  "g g g g g g g g";
   @include mobile-and-tablet {
-    grid-template-areas: ". a a a a a a ." "b b b b b b b b" ". c c c c c c ." ". d d d d d d ." ". e e e e e e ." ". f f f f f f ."  "g g g g g g g g";
+    grid-template-areas: "a a a a a a a a" ". b b b b b b ." ". c c c c c c ." ". d d d d d d ." ". e e e e e e ." ". f f f f f f ."  "g g g g g g g g";
   }
   margin-bottom: 0;
   p {
@@ -21,14 +21,13 @@
     left: 0;
     right: 0;
     height: 30%;
-    background-color: c(pink);
     content: "";
     z-index: -1;
   }
 }
 
 .contact__title {
-  grid-area: a;
+  grid-area: b;
   h1 {
     letter-spacing: 1rem;
   }
@@ -45,7 +44,7 @@
 }
 
 .contact__images-top, .contact__images-bottom {
-  grid-area: b;
+  grid-area: a;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 0;

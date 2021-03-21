@@ -35,10 +35,13 @@ html {
   }
   display: grid;
   grid-template-columns: 4rem 1fr;
-  grid-template-rows: min-content 1fr min-content min-content;
-  grid-template-areas: "sidenav header" "sidenav main" "sidenav signup" "sidenav footer";
+  grid-template-rows: min-content min-content 1fr min-content min-content;
+  grid-template-areas: "sidenav ticker" "sidenav header" "sidenav main" "sidenav signup" "sidenav footer";
 }
 
+.ticker {
+  grid-area: ticker;
+}
 .side-menu {
   grid-area: sidenav;
 }

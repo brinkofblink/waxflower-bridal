@@ -37,6 +37,15 @@
   h2 {
     @include peg-board;
   }
+  .slide h2 {
+    @include peg-board;
+    font-size: 4rem;
+    @include mobile-and-tablet {
+      font-size: 3rem;
+      margin-bottom: 0;
+    }
+    letter-spacing: 0.04ex;
+  }
 }
 
 
@@ -84,7 +93,7 @@
       transform-origin: top center;
       transform: scale(6);
       @include desktop-s {
-        transform: scale(10);
+        transform: scale(12);
       }
       margin-bottom: 4rem;
     }
@@ -98,7 +107,7 @@
       transform-origin: top center;
       transform: scale(6);
       @include desktop-s {
-        transform: scale(10);
+        transform: scale(12);
       }
       margin-bottom: 4rem;
     }

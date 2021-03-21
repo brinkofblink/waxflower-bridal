@@ -79,4 +79,22 @@ h1 {
   line-height: 1.6;
   letter-spacing: 1rem;
   text-transform: uppercase;
+  @include mobile {
+    font-size: 1.8rem;
+    padding-top: 0;
+  }
+}
+
+.c-pink {
+  color: c(pink, bright);
+}
+
+address {
+  white-space: pre-line;
+  font-style: normal;
+  padding-left: 0;
+  margin: 0;
+  ~ a {
+    display: block;
+  }
 }

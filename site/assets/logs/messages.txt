@@ -44,3 +44,7 @@
 2020-11-03 08:24:48	guest	http://waxflower.localhost/	Added 'created_users_id' to DB schema for 'blog_files' (FieldtypeFile)
 2020-11-03 08:24:48	guest	http://waxflower.localhost/	Added 'modified_users_id' to DB schema for 'blog_files' (FieldtypeFile)
 2021-01-06 20:41:39	th_admin	http://waxflower.localhost/admin/setup/field/edit?id=165	Populated initial created/modified dates for 'more_images' (FieldtypeImage)
+2021-03-15 20:53:23	th_admin	http://waxflower.localhost/admin/setup/template/removeFields	Deleted field "the_experience" data in 1 row(s) from 1 page(s) using template "about". [page-by-page] (Fields)
+2021-03-15 20:53:23	th_admin	http://waxflower.localhost/admin/setup/template/removeFields	Deleted field "british_design" data in 1 row(s) from 1 page(s) using template "about". [page-by-page] (Fields)
+2021-03-15 20:54:15	th_admin	http://waxflower.localhost/admin/setup/template/removeFields	Deleted field "the_boutique" data in 1 row(s) from 1 page(s) using template "about". [page-by-page] (Fields)
+2021-03-18 21:32:03	th_admin	http://waxflower.localhost/admin/page/edit/?id=1096	Populated initial created/modified dates for 'video' (FieldtypeVideo)

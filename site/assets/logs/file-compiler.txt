@@ -116,3 +116,21 @@
 2021-03-06 09:41:49	guest	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
 2021-03-06 09:42:00	guest	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
 2021-03-06 09:44:30	guest	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
+2021-03-10 21:06:05	th_admin	http://waxflower.localhost/admin/module/?reset=1	Compiled file: /site/modules/FieldtypeVideo/FieldtypeVideo.module.php
+2021-03-10 21:06:05	th_admin	http://waxflower.localhost/admin/module/?reset=1	Compiled file: /site/modules/FieldtypeVideo/InputfieldVideo.module.php
+2021-03-14 16:36:24	guest	http://waxflower.localhost/	Maintenance/Copy new version of source file to target file: /site/templates/designer.php => /site/assets/cache/FileCompiler/site/templates/designer.php
+2021-03-15 08:33:21	th_admin	http://waxflower.localhost/shop/wifey-for-lifey-hand-embroidered-unisex-sweater-exclusive/	Compiled file: /site/templates/_main.php
+2021-03-15 20:36:41	guest	http://waxflower.localhost/	Maintenance/Copy new version of source file to target file: /site/templates/events.php => /site/assets/cache/FileCompiler/site/templates/events.php
+2021-03-15 20:36:41	guest	http://waxflower.localhost/	Maintenance/Copy new version of source file to target file: /site/templates/shop.php => /site/assets/cache/FileCompiler/site/templates/shop.php
+2021-03-15 20:36:41	guest	http://waxflower.localhost/	Maintenance/Copy new version of source file to target file: /site/templates/shop-product.php => /site/assets/cache/FileCompiler/site/templates/shop-product.php
+2021-03-15 21:39:22	guest	http://waxflower.localhost/about/	Compiled file: /site/templates/_main.php
+2021-03-15 21:49:45	guest	http://waxflower.localhost/about/	Compiled file: /site/templates/_main.php
+2021-03-15 21:51:34	guest	http://waxflower.localhost/about/	Compiled file: /site/templates/_main.php
+2021-03-15 21:52:26	guest	http://waxflower.localhost/about/	Compiled file: /site/templates/_main.php
+2021-03-15 21:54:35	guest	http://waxflower.localhost/about/	Compiled file: /site/templates/_main.php
+2021-03-15 22:18:00	th_admin	http://waxflower.localhost/	Compiled file: /site/templates/_main.php
+2021-03-17 19:51:48	guest	http://waxflower.localhost/	Maintenance/Copy new version of source file to target file: /site/templates/_main.php => /site/assets/cache/FileCompiler/site/templates/_main.php
+2021-03-17 19:51:48	guest	http://waxflower.localhost/	Maintenance/Copy new version of source file to target file: /site/templates/events.php => /site/assets/cache/FileCompiler/site/templates/events.php
+2021-03-17 19:51:50	guest	http://waxflower.localhost/http404/?v=alQ9nGelPp	Compiled file: /site/templates/_main.php
+2021-03-19 21:18:46	guest	http://waxflower.localhost/	Maintenance/Copy new version of source file to target file: /site/templates/about.php => /site/assets/cache/FileCompiler/site/templates/about.php
+2021-03-21 14:43:25	guest	http://waxflower.localhost/	Maintenance/Copy new version of source file to target file: /site/templates/contact.php => /site/assets/cache/FileCompiler/site/templates/contact.php

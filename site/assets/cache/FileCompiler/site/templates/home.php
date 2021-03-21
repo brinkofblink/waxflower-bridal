@@ -73,9 +73,9 @@
   <div class="visit-showroom">
     <div class="slide">
     <?php
-      $ratio = $page->shop_image->width / $page->shop_image->height;
+      $ratio = $page->shop_image->width / $page->shop_image->height ;
       $w = 1200;
-      $h = 1200/$ratio;
+      $h = 700;
     ?>
       <img src="<?= $page->shop_image->srcsetUrls['smallest']  ?>" data-srcset="<?= $page->shop_image->srcset($w . 'x' . $h . ',/2,/3,/4') ?>" data-sizes="auto" src="" class="lazyload" alt=""/>
       <h2>Visit our showroom</h2>
@@ -129,7 +129,7 @@ foreach($instagram->getMedia(8) as $item) {
   <?php foreach($items as $item) {
 	  echo $item;
   } ?>
-  <h2><a href="https://instagram.com/waxflowerbridal">Join our world</a></h2>
+  <h2>WFB's World On Instagram<br><a href="https://instagram.com/waxflowerbridal">Join our world</a></h2>
 </div>
 </div>
 </div>

@@ -32,6 +32,8 @@
       <?php } ?>
       <?php } ?>
 </div>
+<?php } elseif (!$search) { ?>
+  <p>Search for dress names or styles</p>
 <?php } else { ?>
   <p>We couldn't find any pages matching your search. Try another search, or you're welcome to give us a call if you are looking for something particular.</p>
 <?php } ?>

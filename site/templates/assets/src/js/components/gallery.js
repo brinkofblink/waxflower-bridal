@@ -1,6 +1,7 @@
 // import { Luminous, LuminousGallery } from 'luminous-lightbox';
 import PhotoSwipe from 'photoswipe'
 import PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default'
+import {Luminous} from 'luminous-lightbox'
 import Ready from 'ready'
 
 Ready(() => {
@@ -213,4 +214,7 @@ Ready(() => {
 // execute above function
 initPhotoSwipeFromDOM('[data-lightbox]');
 
+document.querySelectorAll("[data-luminous]").forEach((el) => {
+    new Luminous(el)
+})
 })

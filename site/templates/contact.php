@@ -3,7 +3,7 @@
 
 <div pw-replace="main" class="contact">
   <div class="contact__title">
-    <h1><?=$page->title?></h1>
+    <h1>Book an appointment</h1>
   </div>
   <div class="contact__intro">
     <?=$page->text_area?>

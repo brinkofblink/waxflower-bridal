@@ -8,3 +8,4 @@ import "./components/slider";
 import "./components/netlify";
 import "./components/gallery";
 import "./components/favourites";
+import "./components/events";

@@ -1,47 +1,103 @@
 .main.events .intro {
   @include mobile-and-tablet {
-    grid-column: 2 / 10;
+    // grid-column: 2 / 10;
   }
+  grid-column: 1/-1 !important;
   grid-auto-flow: dense;
+}
+
+.main.events .designer-details {
+  grid-column: 1/-1;
+}
+
+.main.events .slider-wrap {
+  width: 100%;
 }
 
 .events-listing {
   display: grid;
-  grid-column:  3 / 9;
+  grid-column:  1 / -1;
+  @include tablet {
+    grid-column:  2 / -2;
+  }
 }
 
 .event__info {
   justify-self: flex-start;
-  align-self: center;
 }
 
 .event__image {
   justify-self: center;
-  align-self: center;
   img {
     position: relative;
     width: 100%;
   }
 }
 
-.event__image {
-  grid-column: 6 / 10;
-  @include mobile {
-    grid-column: 2 / -2;
+.event__date {
+  grid-column: 1;
+  background-color: c(white);
+  box-shadow: 0 1px 2px rgba(c(pink, bright), 1), 0 4px 8px 4px rgba(c(pink), 0.5);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.75rem;
+  span:nth-of-type(1) {
+    font-size: clamp(12px, 6vw, 28px);
   }
-}
-.event__info {
-  grid-column: 3 / 5;
-  text-align: left;
-  @include mobile {
-    grid-column: 3 / -2;
-    justify-self: start;
+  span:nth-of-type(2) {
+    font-size: clamp(10px, 4vw, 24px);
+    border-bottom: 1px solid c(pink, bright);
+  }
+  span:nth-of-type(3) {
+    margin-top: 0.5ex;
+    font-family: "Bebas Neue";
+    font-size: clamp(16px, 22vw, 46px);
   }
 }
 
+.event__image {
+  grid-column: 2/4;
+  grid-row: 1;
+  width: 90%;
+  justify-self: start;
+  @include tablet {
+    grid-column: 2;
+  }
+}
+.event__info {
+  grid-column: 1/4;
+  text-transform: none;
+  @include tablet {
+    grid-column: 3;
+  }
+  text-align: left;
+}
+
 .event {
+  background-color: c(white);
+  border-radius: 0.2rem;
+  padding: $p;
   position: relative;
-  border-bottom: 1px solid c(grey);
   display: grid;
-  grid-template-columns: repeat(1fr, 10);
+  grid-auto-flow: dense;
+  grid-template-columns: max-content 1fr 1.5fr;
+  justify-content: start;
+  align-items: start;
+  gap: $p !important;
+  h2 {
+    margin-top: 0;
+    text-align: left;
+  }
+  + .event {
+    margin-top: $p;
+    padding-top: $p*3;
+    border-top: 1px solid c(pink, bright);
+  }
+}
+
+.share-button {
+  @extend .button;
 }

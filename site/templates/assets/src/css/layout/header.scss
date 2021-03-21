@@ -1,5 +1,15 @@
+.ticker {
+  background-color: c(pink, bright);
+  text-align: center;
+  p {
+    margin: 2px 0;
+    font-weight: 700;
+    color: white
+  }
+}
+
 .header {
-  background-color: c(pink);
+  background-color: c(white);
 
   ul {
     list-style: none;
@@ -52,7 +62,6 @@
   width: 100%;
   .header__logo {
     grid-area: logo;
-    padding-bottom: 2rem;
     img {
       @include tablet {
         width: 150px;

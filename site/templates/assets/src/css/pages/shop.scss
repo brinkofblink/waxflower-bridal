@@ -1,3 +1,37 @@
+.main.shop h1 {
+  @include peg-board();
+}
+
+.main.shop {
+  grid-template-columns: 4% max-content minmax(0, 46rem) 1fr 4%;
+  .sidebar {
+    grid-column: 1/-1;
+    @include desktop-s {
+      grid-column: 2;
+    }
+  }
+  .products {
+    grid-column: 1/-1;
+    @include desktop-s {
+      grid-column: 3/5;
+    }
+  }
+}
+
+.sidebar {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    li + li {
+      margin-top: $p/2;
+    }
+    @include mobile-and-tablet {
+      padding-left: 2%;
+    }
+  }
+}
+
+
 .shop-container {
   position: relative;
   display: grid;
@@ -41,7 +75,7 @@
 
 .shop-container__info {
   grid-area: b;
-  text-align: center;
+  text-align: left;
   ul {
     padding-left: 1rem;
   }
@@ -51,14 +85,14 @@
   }
   p.price {
     font-size: 1.2rem;
-    text-align: center;
+    text-align: left;
     &:after {
       content: "";
       position: relative;
       display: block;
-      border-bottom: 1px solid rgba(c(black), 0.2);
+      border-bottom: 1px solid c(pink, bright);
       width: 80%;
-      margin: 1rem auto;
+      margin: 1rem 0;
     }
   }
   p.smaller {
@@ -66,26 +100,34 @@
   }
   p.helper {
     @extend .smaller;
-    text-align: center;
+    text-align: left;
   }
   h2 {
     font-size: 1rem;
+    text-align: left;
+    margin-bottom: $p/2;
   }
   button {
     text-transform: uppercase;
-    margin-top: 2rem;
+    margin-top: 0;
+    margin-left: -$p/2;
     margin-bottom: 2rem;
   }
 }
 
 .shop-variations {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   margin-bottom: 1rem;
+  flex-wrap: wrap;
   div {
     margin-right: 0.5rem;
+    min-height: 2.7rem;
     input {
       visibility: hidden;
+      width: 0;
+      height: 0;
+      overflow: hidden;
     }
     label {
       padding: 0.2rem 0.5rem;
@@ -144,4 +186,63 @@
     font-family: 'Bebas Neue';
     text-transform: uppercase;
     font-size: 1.8rem;
+}
+
+.products .no-items {
+  grid-column: 1 / -1;
+  text-align: center;
+  background-color: #eee;
+  p {
+    position: relative;
+    margin: $p*2 auto;
+    max-width: 50ch;
+  }
+}
+
+.main.shop .products {
+  @include mobile-and-tablet {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2%;
+  }
+  .product {
+    @include mobile-and-tablet {
+      grid-column: auto;
+    }
+    text-decoration: none;
+    align-items: flex-start;
+    > * {
+      margin: 0;
+    }
+    > *:not(.image):not(span) {
+      padding: $p/4 $p/2;
+      text-align: left;
+    }
+    .designer-name {
+      font-family: 'Bebas Neue';
+      font-size: clamp(10px, 5vw, 18px);
+      margin-bottom: 0;
+    }
+    h2 {
+      font-size: clamp(16px, 5vw, 22px);
+    }
+    > span {
+      position: absolute;
+      background-color: c(pink, bright);
+      color: white;
+      padding: 0 1ex;
+      font-size: 10px;
+      right: $p/2;
+      top: $p/2;
+    }
+    img {
+      height: auto;
+    }
+  }
+}
+
+.price .strikethrough {
+  text-decoration: line-through;
+  text-decoration-thickness: 0.3ex;
+  color: #C7181E;
+  margin-right: 2ex;
 }

@@ -12,15 +12,17 @@
   <a href="tel:+441291621987"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.4 27.51"><g id="b79e548e-e255-4ace-a287-ee03e4d22b7e" data-name="Layer 2"><g id="be840243-b2d6-4fa2-bdb1-acb8b9e813ab" data-name="Layer 1"><rect x="0.5" y="0.5" width="13.4" height="26.51" rx="1.02" fill="none" stroke="#fff" stroke-miterlimit="10"/><line x1="5.2" y1="1.94" x2="5.2" y2="1.94" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/><line x1="6.78" y1="1.94" x2="8.96" y2="1.94" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/><line x1="0.5" y1="3.8" x2="13.9" y2="3.8" fill="none" stroke="#fff" stroke-miterlimit="10"/><line x1="0.5" y1="24.31" x2="14.22" y2="24.31" fill="none" stroke="#fff" stroke-miterlimit="10"/></g></g></svg></a>
   <a class="envelope-icon" href="mailto:info@waxflowerbridal.co.uk"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 342.97 235.5"><g data-name="Layer 2"><g data-name="Layer 1" fill="none" stroke="#ffffff" stroke-miterlimit="10" stroke-width="16"><rect x="8" y="8" width="326.97" height="219.5" rx="8.36"/><path d="M209.55 117.75L330.7 226.43M10.01 224.57l123.95-108.21M8 16.36l163.49 136.82L334.97 16.36"/></g></g></svg></a>
 </div>
+<div class="ticker"><?php if ($pages->get('1')->news_banner) {
+  echo $pages->get('1')->news_banner;
+} ?></div>
 <?php include('./globals/_header.php'); ?>
-
 <main id="main" class="main <?php if ($page->template === "designer") { ?> designer<?php } ?>">
 </main>
 <div id="mc_embed_signup" class="signup">
 <form action="https://waxflowerbridal.us2.list-manage.com/subscribe/post?u=01d0898a25c396f24d815b2a1&amp;id=72a7fd0681" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
-  <div class="form-intro"><h2>Sign up for updates</h2>
-  <p>Be the first to hear about our Sample Sales, events and occasional Waxflower Bridal updates</p>
+  <div class="form-intro"><h2>Subscribe</h2>
+  <p>Be <span class="c-pink">in the know</span> with our Sample Sales, events and occasional Waxflower Bridal updates</p>
 </div><div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
 <div class="mc-field-group">
 	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
@@ -50,73 +52,15 @@
 <!--End mc_embed_signup-->
 <footer class="footer">
   <div>
-    <ul class="footer-sitemap">
-      <li>
-        <ul>
-          <?php $pages->find('parent=1020')->each(function($d) { ?>
-            <li>
-            <a href="<?= $d->url ?>"><?= $d->title ?></a>
-            <ul>
-              <?php $d->find('template=designer')->each(function($p) { ?>
-                <li>
-                  <a href="<?= $p->url ?>"><?= $p->title ?><?php if ($p->exclusive) { echo " <span>//Exclusive</span>"; } ?></a>
-                </li>
-              <?php }) ?>
-            </ul>
-            </li>
-          <?php }); ?>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  <div>
-    <nav>
-      <ul>
-        <li>
-          <a href="/faqs">
-            FAQs
-          </a>
-        </li>
-        <li>
-          <a href="/shipping">
-            Shipping
-          </a>
-        </li>
-        <li>
-          <a href="/about">
-            About us
-          </a>
-        </li>
-        <li>
-          <a href="/events">
-            Events
-          </a>
-        </li>
-        <li>
-          <a href="/shop">
-            E-shop
-          </a>
-        </li>
-        <li>
-          <a href="/contact">
-            Contact us
-          </a>
-        </li>
-        <li>
-          <a href="<?= $config->urls->templates ?>images/global/terms-conditions.pdf" download="Waxflower Bridal Terms Conditions">Terms and conditions</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <div>
-    Waxflower Bridal
-    <br> 4 St Mary Street
-    <br>Chepstow
-    <br>NP16 5 EU
-    <br><br>01291 621 987
-    <br>info@waxflowerbridal.co.uk
-    <br>@waxflowerbridal<br>
-    <ul class="footer-socials">
+  <h3>Waxflower Bridal</h3>
+  <address>4 St.Mary Street
+  Chepstow
+  Monmouthshire
+  NP16 5EU
+  </address>
+  <a href="tel:01291621987">01291 621987</a>
+  <a href="mailto:info@waxflowerbridal.co.uk">info@waxflowerbridal.co.uk</a>
+  <ul class="footer-socials">
     <li>
         <a href="https://www.pinterest.co.uk/waxflowerbridal/" rel="noreferrer noopener" target="_blank">
           <img src="<?= $config->urls->templates ?>images/icons/icon-pinterest.svg" width="50" height="50" alt="pinterest logo">
@@ -139,6 +83,41 @@
       </li>
       </ul>
   </div>
+  <div>
+  <h3>Information</h3>
+    <nav>
+      <ul>
+        <li>
+          <a href="/book-an-appointment">
+            Appointments
+          </a>
+        </li>
+        <li>
+          <a href="/faqs">
+            FAQs
+          </a>
+        </li>
+        <li>
+          <a href="/shipping">
+            Shipping
+          </a>
+        </li>
+        <li>
+          <a href="/contact">
+            Contact us
+          </a>
+        </li>
+        <li>
+          <a href="<?= $config->urls->templates ?>images/global/terms-conditions.pdf" download="Waxflower Bridal Terms Conditions">Terms and conditions</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div>
+  <h3>Stay in touch</h3>
+  <p>Be in the know with our updates</p>
+  <a href="#mc_embed_signup" class="button">Sign up</a>
+  </div>
 </footer>
 
 <!--[if lt IE 9]>
@@ -146,7 +125,7 @@
     <script src="bower_components/ie-love/dist/ie-love.min.js"></script>
   <![endif]-->
 <script src="<?= $config->urls->templates ?>assets/dist/main.js"></script>
-<script async src="https://cdn.snipcart.com/themes/v3.0.24/default/snipcart.js"></script>
+<script async src="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.js"></script>
 <div hidden id="snipcart" data-api-key="NzUzMWE0NDMtYTI2Yi00OGYzLWIzMjQtMDkwYWI3ZWE0YzliNjM1OTkxOTcwODk4NzAyNDcz"></div>
 <script type="text/javascript">
 (function(d){
